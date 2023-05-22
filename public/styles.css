@@ -52,12 +52,14 @@ body::-webkit-scrollbar-thumb {
 
 .dropdown-menu {
     display: block;
-    transform: translateY(-25rem);
+    transform: translateY(-27rem);
     left: 0;
     transition: all 0.5s;
 }
 
 .dropdown-hover:hover>.dropdown-menu {
+    background-color: #081247;
+    color: #0083ff;
     display: inline-block;
     left: 0;
     transform: translateY(10px);
@@ -65,6 +67,11 @@ body::-webkit-scrollbar-thumb {
 
 .dropdown-hover>.dropdown-toggle:active {
     pointer-events: none;
+}
+
+.list-group-item{
+    background-color: #ecf5fe;
+    color: #273f5b;
 }
 
 #hero .container {
@@ -114,14 +121,25 @@ body::-webkit-scrollbar-thumb {
     padding-top: 0.5rem;
 }
 
+.carousel-control-prev{
+    height: 10px;
+
+}
+
+.carousel-control-next{
+    height: 10px;
+}
+
 .carousel-control-next-icon {
     position: absolute;
+    top: 50vh;
     right: 20%;
     background: url("/right-arrows.png") no-repeat;
 }
 
 .carousel-control-prev-icon {
     position: absolute;
+    top: 50vh;
     left: 20%;
     background: url("/icons8-left-arrow-32.png") no-repeat;
 }
