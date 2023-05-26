@@ -24,10 +24,6 @@ body::-webkit-scrollbar-thumb {
     -webkit-text-fill-color: transparent;
 }
 
-.main-btn {
-    border: none;
-    padding: 0;
-}
 
 #navbar {
     padding: 0.5% 5%;
@@ -36,34 +32,57 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar {
-    transition: all 1.5s;
+    transition: all 2s;
 }
 
 .search {
     border-radius: 100px;
 }
 
-.navbar-scrolled {
-    background-color: #ecf5fe;
-    height: 4rem;
-    box-shadow: 15px 0 25px 0 rgba(200, 219, 239, 0.3);
-    padding: 0 3.5% 0 3%;
+
+
+@media only screen and (min-width: 993px) {
+    
+    .navbar-scrolled {
+        background-color: #ecf5fe;
+        height: 4.5rem;
+        box-shadow: 15px 0 25px 0 rgba(200, 219, 239, 0.3);
+    }
+    .dropdown-menu {
+        display: block;
+        transform: translateY(-50rem);
+        left: 0;
+        transition: all 0.5s;
+    }
+    .dropdown-hover:hover>.dropdown-menu {
+        /* background-color: #081247; */
+        color: #0083ff;
+        display: inline-block;
+        left: 0;
+        transform: translateY(10px);
+    }
 }
 
-.dropdown-menu {
-    display: block;
-    transform: translateY(-27rem);
-    left: 0;
-    transition: all 0.5s;
-}
-
-.dropdown-hover:hover>.dropdown-menu {
-    background-color: #081247;
-    color: #0083ff;
-    display: inline-block;
-    left: 0;
-    transform: translateY(10px);
-}
+@media only screen and (max-width: 768px) {
+    
+    .dropdown-menu{
+        background-color: #ecf5fe;
+        visibility: hidden;
+    }
+    .dropdown-hover:hover>.dropdown-menu{
+        visibility: visible;
+        background-color: #ecf5fe;
+        display: block;
+        max-height: 350px;
+        overflow-y: scroll;
+    }
+    .carousel-control-prev {
+        display: none;
+    }
+    .carousel-control-next {
+        display: none;
+    }
+  }
 
 .dropdown-hover>.dropdown-toggle:active {
     pointer-events: none;
@@ -74,77 +93,110 @@ body::-webkit-scrollbar-thumb {
     color: #273f5b;
 }
 
-#hero .container {
-    padding: 1% 3% 3%;
+/* hero section */
+/* hero section starts from here */
+
+@media only screen and (min-width: 993px) {
+
+    #hero .container {
+        padding: 1% 3% 3%;
+    }
+    
+    .carousel-item {
+        height: 80vh;
+    }
+    
+    .title {
+        color: #273f5b;
+        font-weight: bold;
+        font-size: 8rem;
+        line-height: 1.5;
+        padding: 7% 1% 1% 3%;
+    }
+    
+    .btn-hero {
+        position: relative;
+        top: -3rem;
+    }
+    
+    .title-img {
+        width: 100%;
+        /* padding: 10%; */
+    }
+    
+    #hero h1 {
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    #hero h3 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        font-size: 1.3rem;
+        line-height: 1;
+    }
+    
+    .turn-down-arrow {
+        height: 3rem;
+        padding-left: 0;
+        padding-top: 0.5rem;
+    }
+    
+    .carousel-control-prev{
+        height: 10px;
+    
+    }
+    
+    .carousel-control-next{
+        height: 10px;
+    }
+    
+    .carousel-control-next-icon {
+        position: absolute;
+        top: 50vh;
+        right: 20%;
+        background: url("/right-arrows.png") no-repeat;
+    }
+    
+    .carousel-control-prev-icon {
+        position: absolute;
+        top: 50vh;
+        left: 20%;
+        background: url("/icons8-left-arrow-32.png") no-repeat;
+    }
 }
 
-.carousel-item {
-    height: 80vh;
-}
+@media only screen and (max-width: 768px) {
+    #hero .container{
+        display: flex;
+        /* flex-direction: column-reverse; */
+        /* text-align: center; */
+        /* justify-content: center; */
+        padding: 10% 10%;
+    }
 
-.title {
-    color: #273f5b;
-    font-weight: bold;
-    font-size: 8rem;
-    line-height: 1.5;
-    padding: 7% 1% 1% 3%;
-    justify-content: left;
-}
-
-.btn-hero {
-    position: relative;
-    top: -3rem;
-}
-
-.title-img {
-    width: 100%;
-    /* padding: 10%; */
-}
-
-#hero h1 {
-    font-family: sans-serif;
-    font-weight: bolder;
-    font-size: 2.5rem;
-    line-height: 1.2;
-}
-
-#hero h3 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: lighter;
-    font-size: 1.3rem;
-    line-height: 1;
-}
-
-.turn-down-arrow {
-    height: 3rem;
-    padding-left: 0;
-    padding-top: 0.5rem;
-}
-
-.carousel-control-prev{
-    height: 10px;
+    .for-small{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* width: 90%; */
+    }
+    
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 
 }
 
-.carousel-control-next{
-    height: 10px;
-}
-
-.carousel-control-next-icon {
-    position: absolute;
-    top: 50vh;
-    right: 20%;
-    background: url("/right-arrows.png") no-repeat;
-}
-
-.carousel-control-prev-icon {
-    position: absolute;
-    top: 50vh;
-    left: 20%;
-    background: url("/icons8-left-arrow-32.png") no-repeat;
-}
+/* features box */
+/*  starts from here */
 
 #features {
+    margin-top:9vh ;
     background-color: white;
     padding: 2% 5%;
 }

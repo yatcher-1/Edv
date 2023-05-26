@@ -9,6 +9,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
 // horizontal scroll
 
 (function(){
