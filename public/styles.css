@@ -516,6 +516,12 @@ canvas {
         text-align: center;
         transition: all 0.7s linear;
         color: white;
+        padding: 3% 2%;
+    }
+    
+    .counter-numbers{
+        font-size: 2.5rem;
+        padding: 15% 2%;
     }
 
     canvas {
@@ -524,10 +530,10 @@ canvas {
     }
     
     #particles-js {
-        height: 20vh;
+        height: 25vh;
         width: 100vw;
         margin-bottom: -10rem;
-        transform: translateY(-6rem);
+        transform: translateY(-15rem);
     }
     
 }

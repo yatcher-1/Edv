@@ -31,55 +31,6 @@ window.addEventListener("resize", function () {
     }
 }); 
 
-
-// horizontal scroll
-
-
-(function(){
-  init();
-
-  var g_containerInViewport;
-  function init(){
-      setStickyContainersSize();
-      bindEvents();
-  }
-
-  function bindEvents(){
-      window.addEventListener("wheel", wheelHandler);        
-  }
-
-  function setStickyContainersSize(){
-      document.querySelectorAll('.sticky-container-for-hori').forEach(function(container){
-          const stikyContainerHeight = container.querySelector('.main-hori').scrollWidth;
-          container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
-      });
-  }
-
-  function isElementInViewport (el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
-  }
-
-  function wheelHandler(evt){
-      
-      const containerInViewPort = Array.from(document.querySelectorAll('.sticky-container-for-hori')).filter(function(container){
-          return isElementInViewport(container);
-      })[0];
-
-      if(!containerInViewPort){
-          return;
-      }
-
-      var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
-      var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
-      let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
-
-      if(g_canScrollHorizontally){
-          containerInViewPort.querySelector('.main-hori').scrollLeft += evt.deltaY;
-      }
-  }
-})();
-
 // animate counter
 
 const counterNum = document.querySelectorAll(".counter-numbers");
@@ -215,3 +166,52 @@ particlesJS("particles-js", {
     },
     "retina_detect": true
   });
+
+// horizontal scroll
+
+
+(function(){
+  init();
+
+  var g_containerInViewport;
+  function init(){
+      setStickyContainersSize();
+      bindEvents();
+  }
+
+  function bindEvents(){
+      window.addEventListener("wheel", wheelHandler);        
+  }
+
+  function setStickyContainersSize(){
+      document.querySelectorAll('.sticky-container-for-hori').forEach(function(container){
+          const stikyContainerHeight = container.querySelector('.main-hori').scrollWidth;
+          container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
+      });
+  }
+
+  function isElementInViewport (el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
+  }
+
+  function wheelHandler(evt){
+      
+      const containerInViewPort = Array.from(document.querySelectorAll('.sticky-container-for-hori')).filter(function(container){
+          return isElementInViewport(container);
+      })[0];
+
+      if(!containerInViewPort){
+          return;
+      }
+
+      var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
+      var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
+      let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+
+      if(g_canScrollHorizontally){
+          containerInViewPort.querySelector('.main-hori').scrollLeft += evt.deltaY;
+      }
+  }
+})();
+
