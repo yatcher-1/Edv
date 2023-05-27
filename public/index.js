@@ -9,6 +9,24 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// navbar hover not hover
+
+const classList = document.querySelectorAll(".dropdown")
+    
+window.addEventListener("resize", function () {
+
+    if(window.innerWidth < 1000) {   
+        classList.forEach( item => {
+        item.classList.remove("dropdown-hover")})
+    } 
+ 
+    else{
+      console.log('more')
+        classList.forEach( item => {
+        item.classList.add("dropdown-hover")})
+    }
+}); 
+
 
 // horizontal scroll
 
