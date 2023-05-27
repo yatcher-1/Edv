@@ -9,27 +9,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// navbar hover not hover
 
-const classList = document.querySelectorAll(".dropdown")
-const horizontal = document.querySelectorAll(".main-hori-small")
-    
-window.addEventListener("resize", function () {
-
-    if(window.innerWidth < 1350) {   
-        classList.forEach( item => {
-        item.classList.remove("dropdown-hover")})
-        horizontal.forEach( item => {
-        item.classList.remove("main-hori")})
-    } 
- 
-    else{
-        classList.forEach( item => {
-        item.classList.add("dropdown-hover")})
-        horizontal.forEach( item => {
-        item.classList.add("main-hori")})
-    }
-}); 
 
 // animate counter
 
@@ -168,7 +148,27 @@ particlesJS("particles-js", {
   });
 
 // horizontal scroll
+// navbar hover not hover
 
+const classList = document.querySelectorAll(".dropdown")
+const horizontal = document.querySelectorAll(".main-hori-small")
+    
+window.addEventListener("resize", function () {
+
+    if(window.innerWidth < 1080) {   
+        classList.forEach( item => {
+        item.classList.remove("dropdown-hover")})
+        horizontal.forEach( item => {
+        item.classList.remove("main-hori")})
+    } 
+ 
+    else{
+        classList.forEach( item => {
+        item.classList.add("dropdown-hover")})
+        horizontal.forEach( item => {
+        item.classList.add("main-hori")})
+    }
+}); 
 
 (function(){
   init();
