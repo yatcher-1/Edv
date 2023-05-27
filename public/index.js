@@ -21,7 +21,6 @@ window.addEventListener("resize", function () {
     } 
  
     else{
-      console.log('more')
         classList.forEach( item => {
         item.classList.add("dropdown-hover")})
     }
@@ -30,13 +29,23 @@ window.addEventListener("resize", function () {
 
 // horizontal scroll
 
+
+
 (function(){
   init();
 
   var g_containerInViewport;
   function init(){
-      setStickyContainersSize();
-      bindEvents();
+    window.addEventListener("resize", function () {
+
+      if(window.innerWidth > 1350) {   
+        setStickyContainersSize();
+        bindEvents();
+      } 
+      else{
+          console.log("nothing");
+      }
+  });
   }
 
   function bindEvents(){
