@@ -111,6 +111,7 @@ body::-webkit-scrollbar-thumb {
     color: #273f5b;
 }
 
+
 /* hero section */
 /* hero section starts from here */
 
@@ -182,21 +183,39 @@ body::-webkit-scrollbar-thumb {
         left: 20%;
         background: url("/icons8-left-arrow-32.png") no-repeat;
     }
+
+    .custom-shape-divider-bottom-1685172480 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-bottom-1685172480 svg {
+        position: relative;
+        display: block;
+        width: calc(124% + 1.3px);
+        height: 81px;
+    }
+    
+    .custom-shape-divider-bottom-1685172480 .shape-fill {
+        fill: #FFFFFF;
+    }
 }
 
 @media only screen and (max-width: 1350px) {
+    
     #hero .container {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: 100vh;
+        padding-top: 10%;
     }
 
-    .hero-title {
-
-    }
-    
     .turn-down-arrow {
         height: 2.3rem;
         padding-left: 0;
@@ -221,11 +240,16 @@ body::-webkit-scrollbar-thumb {
         font-size: 1rem;
     }
 
-    .title-img {
-        padding: 1% 2%;
-        float: right;
+    .title-img{
+        width: 100%;
+        height: 80%;
+    }
+
+    .custom-shape-divider-bottom-1685172480{
+        display: none;
     }
 }
+
 
 /* features box */
 /*  starts from here */
