@@ -12,17 +12,22 @@ window.addEventListener("scroll", () => {
 // navbar hover not hover
 
 const classList = document.querySelectorAll(".dropdown")
+const horizontal = document.querySelectorAll(".main-hori-small")
     
 window.addEventListener("resize", function () {
 
     if(window.innerWidth < 1350) {   
         classList.forEach( item => {
         item.classList.remove("dropdown-hover")})
+        horizontal.forEach( item => {
+        item.classList.remove("main-hori")})
     } 
  
     else{
         classList.forEach( item => {
         item.classList.add("dropdown-hover")})
+        horizontal.forEach( item => {
+        item.classList.add("main-hori")})
     }
 }); 
 
@@ -30,22 +35,13 @@ window.addEventListener("resize", function () {
 // horizontal scroll
 
 
-
 (function(){
   init();
 
   var g_containerInViewport;
   function init(){
-    window.addEventListener("resize", function () {
-
-      if(window.innerWidth > 1350) {   
-        setStickyContainersSize();
-        bindEvents();
-      } 
-      else{
-          console.log("nothing");
-      }
-  });
+      setStickyContainersSize();
+      bindEvents();
   }
 
   function bindEvents(){
