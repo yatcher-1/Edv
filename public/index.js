@@ -150,19 +150,18 @@ particlesJS("particles-js", {
 // horizontal scroll
 // navbar hover not hover
 
-const classList = document.querySelectorAll(".dropdown")
-const horizontal = document.querySelectorAll(".main-hori-small")
+const classList = document.querySelectorAll(".dropdown");
     
 window.addEventListener("resize", function () {
 
     if(window.innerWidth < 1080) {   
         classList.forEach( item => {
-        item.classList.remove("dropdown-hover")})
+        item.classList.remove("dropdown-hover")});
     } 
  
     else{
         classList.forEach( item => {
-        item.classList.add("dropdown-hover")})
+        item.classList.add("dropdown-hover")});
       }
 }); 
 
