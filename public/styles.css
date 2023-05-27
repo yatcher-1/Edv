@@ -29,7 +29,7 @@ body::-webkit-scrollbar-thumb {
     transition: all 2s;
 }
 
-@media only screen and (min-width: 1351px) {
+@media only screen and (min-width: 1366px) {
     #navbar {
         background-color: #ecf5fe;
         align-items: center;
@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1080px) {
     .navbar-scrolled {
         background-color: #ecf5fe;
         height: 5rem;
@@ -86,13 +86,6 @@ body::-webkit-scrollbar-thumb {
 
     .dropdown-menu {
         background-color: #ecf5fe;
-    }
-
-    .dropdown-hover:hover>.dropdown-menu {
-        background-color: #ecf5fe;
-        display: block;
-        max-height: 350px;
-        overflow-y: scroll;
     }
 
     .carousel-control-prev {
