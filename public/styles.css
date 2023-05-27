@@ -373,6 +373,7 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 1080px) {
 
     #services{
+        height: 400vh;
         border: 1px solid black;
         border-radius: 20px;
     }
