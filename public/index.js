@@ -15,7 +15,7 @@ const classList = document.querySelectorAll(".dropdown")
     
 window.addEventListener("resize", function () {
 
-    if(window.innerWidth < 1000) {   
+    if(window.innerWidth < 1350) {   
         classList.forEach( item => {
         item.classList.remove("dropdown-hover")})
     } 
