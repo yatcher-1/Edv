@@ -158,16 +158,12 @@ window.addEventListener("resize", function () {
     if(window.innerWidth < 1080) {   
         classList.forEach( item => {
         item.classList.remove("dropdown-hover")})
-        horizontal.forEach( item => {
-        item.classList.remove("main-hori")})
     } 
  
     else{
         classList.forEach( item => {
         item.classList.add("dropdown-hover")})
-        horizontal.forEach( item => {
-        item.classList.add("main-hori")})
-    }
+      }
 }); 
 
 (function(){
