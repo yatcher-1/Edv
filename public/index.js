@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
 
 const classList = document.querySelectorAll(".dropdown");
     
-window.addEventListener("resize", function () {
+window.addEventListener("resize", window.onload=function () {
 
     if(window.innerWidth < 1080) {   
         classList.forEach( item => {
