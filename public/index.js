@@ -16,12 +16,12 @@ window.addEventListener("resize", window.onload=function () {
 
     if(window.innerWidth < 1080) {   
         classList.forEach( item => {
-        item.classList.remove("dropdown-hover")});
+        item.classList.remove("dropdown-hover", "position-static")});
     } 
  
     else{
         classList.forEach( item => {
-        item.classList.add("dropdown-hover")});
+        item.classList.add("dropdown-hover", "position-static")});
       }
 }); 
 

@@ -20,7 +20,7 @@ app.get("/About-Us", function(req, res){
 });
 
 app.get("/Contact", function(req, res){
-    res.render("about");
+    res.render("contact");
 });
 
 app.listen(PORT, () => {
