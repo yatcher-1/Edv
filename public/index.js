@@ -8,7 +8,6 @@ window.addEventListener("scroll", () => {
     navEl.classList.remove("navbar-scrolled", "fixed-top");
   }
 });
-
 // navbar hover not hover
 
 const classList = document.querySelectorAll(".dropdown");
@@ -26,7 +25,12 @@ window.addEventListener("resize", function () {
       }
 }); 
 
-
+function offset(el) {
+  var rect = el.getBoundingClientRect(),
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
 
 // animate counter
 let timerInterval = null;
@@ -46,12 +50,11 @@ counterNum.forEach((curElem)=>{
     
         if(initialNum < targetNumber){
             curElem.innerText = `${initialNum + incrementNumber} +`;
-            setTimeout(updateNumber, 50);
+            setTimeout(updateNumber, 70);
         }
     };
-
-    updateNumber();
-  }, 15000);
+        updateNumber();
+  },5000);
 });
 
 // particlejs
