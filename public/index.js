@@ -9,15 +9,34 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// navbar hover not hover
+
+const classList = document.querySelectorAll(".dropdown");
+    
+window.addEventListener("resize", function () {
+
+    if(window.innerWidth < 1080) {   
+        classList.forEach( item => {
+        item.classList.remove("dropdown-hover")});
+    } 
+ 
+    else{
+        classList.forEach( item => {
+        item.classList.add("dropdown-hover")});
+      }
+}); 
+
 
 
 // animate counter
-
+let timerInterval = null;
 const counterNum = document.querySelectorAll(".counter-numbers");
 
 const speed = 200;
 
 counterNum.forEach((curElem)=>{
+
+  timerInterval = setInterval(()=>{
 
     const updateNumber = ()=>{
         const targetNumber = parseInt(curElem.dataset.number);
@@ -27,11 +46,12 @@ counterNum.forEach((curElem)=>{
     
         if(initialNum < targetNumber){
             curElem.innerText = `${initialNum + incrementNumber} +`;
-            setTimeout(updateNumber, 70);
+            setTimeout(updateNumber, 50);
         }
     };
 
     updateNumber();
+  }, 15000);
 });
 
 // particlejs
@@ -148,22 +168,6 @@ particlesJS("particles-js", {
   });
 
 // horizontal scroll
-// navbar hover not hover
-
-const classList = document.querySelectorAll(".dropdown");
-    
-window.addEventListener("resize", function () {
-
-    if(window.innerWidth < 1080) {   
-        classList.forEach( item => {
-        item.classList.remove("dropdown-hover")});
-    } 
- 
-    else{
-        classList.forEach( item => {
-        item.classList.add("dropdown-hover")});
-      }
-}); 
 
 (function(){
   init();
