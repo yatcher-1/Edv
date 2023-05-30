@@ -6,19 +6,19 @@ const app = express();
 const _ = require("lodash");
 const PORT = process.env.PORT || 3000;
 const http = require("http");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://Yatcher_01:Jaguar123@new.nufxqpo.mongodb.net/blogDB", {
-    useNewUrlParser: true
-});
+// mongoose.connect("mongodb+srv://Yatcher_01:Jaguar123@new.nufxqpo.mongodb.net/blogDB", {
+//     useNewUrlParser: true
+// });
 
-const postSchema = {
-    title: String,
-    content: String,
-    class: String
-};
+// const postSchema = {
+//     title: String,
+//     content: String,
+//     class: String
+// };
 
-const Post = mongoose.model("Post", postSchema);
+// const Post = mongoose.model("Post", postSchema);
 
 app.use(bodyParser.urlencoded({
     extended: true
