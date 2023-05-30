@@ -27,15 +27,16 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 app.get("/", function (req, res) {
-    Post.find({}).then(function(posts){
-        try {
-          res.render("home", {
-            posts: posts
-            });
-        } catch (error) {
-        console.log(error);      
-        }
-      });
+    // Post.find({}).then(function(posts){
+    //     try {
+    //       res.render("home", {
+    //         posts: posts
+    //         });
+    //     } catch (error) {
+    //     console.log(error);      
+    //     }
+    //   });
+    res.render("home");
 });
 
 app.get("/About-Us", function (req, res) {
@@ -46,17 +47,17 @@ app.get("/Contact", function (req, res) {
     res.render("contact");
 });
 
-app.get("/Blogs", function(req, res){
-    Post.find({}).then((post)=>{
-      try {
-        if(post){
-          res.render("blogs", {postsFound: post});
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    });
-});
+// app.get("/Blogs", function(req, res){
+//     Post.find({}).then((post)=>{
+//       try {
+//         if(post){
+//           res.render("blogs", {postsFound: post});
+//         }
+//       } catch (error) {
+//         console.log(error);
+//       }
+//     });
+// });
 
 app.listen(PORT, () => {
     console.log(`server started on port ${PORT}`);
