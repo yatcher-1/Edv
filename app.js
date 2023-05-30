@@ -47,6 +47,10 @@ app.get("/Contact", function (req, res) {
     res.render("contact");
 });
 
+app.get("/Blogs", function(req, res){
+    res.render("blogs");
+});
+
 // app.get("/Blogs", function(req, res){
 //     Post.find({}).then((post)=>{
 //       try {
