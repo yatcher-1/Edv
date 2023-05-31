@@ -87,9 +87,12 @@ body::-webkit-scrollbar-thumb {
     ul li {
         font-size: 1rem;
         padding: 2% 3%;
-        /* border: 2px dashed #273f5b; */
         border-radius: 3%;
         margin-bottom: 2%;
+    }
+    
+    .navbar ul li{
+        border: 2px dashed #273f5b;
     }
 
     .dropdown-menu {
@@ -568,27 +571,57 @@ body::-webkit-scrollbar-thumb {
 /* worked box */
 /* worked box starts */
 
+@media only screen and (min-width: 1366px) {
+
 #worked {
     height: 50%;
-    text-align: center;
+    text-align: left;
     background-color: #fff;
     padding: 6% 3%;
 }
 
 .worked-title {
     color: #273f5b;
-    padding: 1% 3%;
+    padding: 1% 3% 2%;
 }
 
-.worked-img {
-    width: 80%;
-    padding: 1% 2%;
-    margin: 1rem;
+.worked-box{
+    background-color: #f4f4f4f3;
+    padding: 2% 6%;
+}
+
+.worked-party {
+    width: 100%;
+    font-size: 1.5rem;
     filter: grayscale(100%);
+    padding: 3%;
 }
 
-.worked-img:hover {
+.worked-party:hover {
     filter: grayscale(0%);
+    font-size: 1.6rem;
+}
+
+}
+
+@media only screen and (max-width: 1080px) {
+    #worked {
+        height: 50%;
+        text-align: left;
+        background-color: #fff;
+        padding: 1% 1%;
+    }
+
+    .worked-title {
+        color: #273f5b;
+        padding: 3% 3%;
+    }
+
+    .worked-party {
+        width: 100%;
+        padding: 1% 1%;
+        margin: 1rem;
+    }
 }
 
 /* grid box */
@@ -598,7 +631,7 @@ body::-webkit-scrollbar-thumb {
 
 
     .section-work-data {
-        background-color: #273f5b;
+        background-color: #081247;
         text-align: center;
         transition: all 0.7s linear;
         color: white;
