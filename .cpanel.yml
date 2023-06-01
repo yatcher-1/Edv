@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kpgipxlx/ekkdigitalvyapar.info/
+    - export DEPLOYPATH=/home/kpgipxlx/edv/test
     - /bin/cp * $DEPLOYPATH
