@@ -33,5 +33,4 @@ app.get("/Blogs", function(req, res){
 
 app.listen(PORT, (req, res) => {
     console.log(`server started on port ${PORT}`);
-    res.send(`hello from ${PORT}`);
 });
