@@ -15,6 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: www.ekkdigitalvyapar.in
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
+        username: ${{ secrets.EDV_SEC }}
+        password: ${{ secrets.EDV_SEC }}
         server-dir: /ekkdigitalvyapar.in/
