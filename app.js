@@ -6,19 +6,7 @@ const app = express();
 const _ = require("lodash");
 const PORT = process.env.PORT || 3000;
 const http = require("http");
-// const mongoose = require("mongoose");
 
-// mongoose.connect("mongodb+srv://Yatcher_01:Jaguar123@new.nufxqpo.mongodb.net/blogDB", {
-//     useNewUrlParser: true
-// });
-
-// const postSchema = {
-//     title: String,
-//     content: String,
-//     class: String
-// };
-
-// const Post = mongoose.model("Post", postSchema);
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -27,16 +15,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 app.get("/", function (req, res) {
-    // Post.find({}).then(function(posts){
-    //     try {
-    //       res.render("home", {
-    //         posts: posts
-    //         });
-    //     } catch (error) {
-    //     console.log(error);      
-    //     }
-    //   });
-    res.render("home");
+       res.render("home");
 });
 
 app.get("/About-Us", function (req, res) {
@@ -51,17 +30,6 @@ app.get("/Blogs", function(req, res){
     res.render("blogs");
 });
 
-// app.get("/Blogs", function(req, res){
-//     Post.find({}).then((post)=>{
-//       try {
-//         if(post){
-//           res.render("blogs", {postsFound: post});
-//         }
-//       } catch (error) {
-//         console.log(error);
-//       }
-//     });
-// });
 
 app.listen(PORT, (req, res) => {
     console.log(`server started on port ${PORT}`);
