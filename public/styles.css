@@ -219,8 +219,8 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         align-items: start;
         justify-content: center;
-        height: 100vh;
-        padding: 5% 2% 0%;
+        height: 65vh;
+        padding: 5% 2% 2%;
     }
 
     .turn-down-arrow {
