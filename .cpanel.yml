@@ -1,5 +1,5 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home/kpgipxlx/public_html/edv
+ - export DEPLOYPATH=/home/kpgipxlx/EDV
  - /bin/cp * $DEPLOYPATH
