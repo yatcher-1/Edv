@@ -8,9 +8,32 @@ const PORT = process.env.PORT || 3000;
 const http = require("http");
 const mongoose = require("mongoose");
 
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
+
+
 const connectDB = async () =>{
   try {
     await mongoose.connect("mongodb+srv://Yatcher_01:Jaguar123@new.nufxqpo.mongodb.net/blogDB", {useNewUrlParser:true});
+    const postSchema = {
+      title: String,
+      content: String,
+      class: String
+    };
+    
+    const Post = mongoose.model("Post", postSchema);
+    app.get("/", function(req, res){
+      Post.find({}).then(function(posts){
+        try {
+          res.render("home", {posts: posts});
+        } catch (error) {
+        console.log(error);
+        }
+      });
+    });
     console.log("connection to mong sucssefull")
   } catch (error) {
     console.log(error);
@@ -19,29 +42,16 @@ const connectDB = async () =>{
 
 connectDB();
 
-const postSchema = {
-  title: String,
-  content: String,
-  class: String
-};
+// const postSchema = {
+//   title: String,
+//   content: String,
+//   class: String
+// };
 
-const Post = mongoose.model("Post", postSchema);
+// const Post = mongoose.model("Post", postSchema);
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.set('view engine', 'ejs');
-app.use(express.static("public"));
 
-app.get("/", function(req, res){
-    Post.find({}).then(function(posts){
-      try {
-        res.render("home", {posts: posts});
-      } catch (error) {
-      console.log(error);
-      }
-    });
-  });
+
 
 app.get("/About-Us", function (req, res) {
     res.render("about");
