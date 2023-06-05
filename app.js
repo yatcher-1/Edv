@@ -6,7 +6,17 @@ const app = express();
 const _ = require("lodash");
 const PORT = process.env.PORT || 3000;
 const http = require("http");
+const mongoose = require("mongoose");
 
+mongoose.connect("mongodb+srv://Yatcher_01:Jaguar123@new.nufxqpo.mongodb.net/blogDB", {useNewUrlParser:true});
+
+const postSchema = {
+  title: String,
+  content: String,
+  class: String
+};
+
+const Post = mongoose.model("Post", postSchema);
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -14,9 +24,15 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
-app.get("/", function (req, res) {
-       res.render("comming-soon");
-});
+app.get("/", function(req, res){
+    Post.find({}).then(function(posts){
+      try {
+        res.render("home", {posts: posts});
+      } catch (error) {
+      console.log(error);
+      }
+    });
+  });
 
 app.get("/About-Us", function (req, res) {
     res.render("about");
