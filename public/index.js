@@ -234,4 +234,4 @@ items.forEach((el) => {
         el.appendChild(cloneChild.children[0])
         next = next.nextElementSibling
     }
-})
+});
