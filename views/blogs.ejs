@@ -1,5 +1,37 @@
 <%- include ("header.ejs")%>
 
 
+<section id="title-banner">
+    <div class="container">
+        <div class="carousel-item active">
+            <div class="row">
+                <h1 class="mb-3 worked-title">Blogs</h1>
+                <div class="col-12 col-md-12 col-lg-6 title">
+                    <h1>Knowledge spread is knowledge gained...</h1>
+                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog-display">
+    <div class="container-fluid">
+        <div class="row" role="listbox">
+            <%postsFound.forEach(function(post){%>
+            <div class="col-md-3 p-3">
+                <div class="card">
+                    <img src="/main-ai.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <hr class="hr hr-blurry position-relative" style="width: 16rem;" />
+                        <h5 class="card-title"><%=post.title%></h5>
+                        <p class="card-text"><%=post.content%></p>
+                        <a href="#" class="btn btn-dark">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <%});%>
+        </div>
+    </div>
+</section>
 
 <%- include ("footer.ejs")%>

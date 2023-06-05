@@ -34,6 +34,15 @@ const connectDB = async () =>{
         }
       });
     });
+    app.get("/Blogs", function(req, res){
+      Post.find({}).then(function(posts){
+        try {
+          res.render("blogs", {postsFound: posts});
+        } catch (error) {
+        console.log(error);
+        }
+      });
+    });
     console.log("connection to mong sucssefull")
   } catch (error) {
     console.log(error);
@@ -42,17 +51,6 @@ const connectDB = async () =>{
 
 connectDB();
 
-// const postSchema = {
-//   title: String,
-//   content: String,
-//   class: String
-// };
-
-// const Post = mongoose.model("Post", postSchema);
-
-
-
-
 app.get("/About-Us", function (req, res) {
     res.render("about");
 });
@@ -60,11 +58,6 @@ app.get("/About-Us", function (req, res) {
 app.get("/Contact", function (req, res) {
     res.render("contact");
 });
-
-app.get("/Blogs", function(req, res){
-    res.render("blogs");
-});
-
 
 app.listen(PORT, (req, res) => {
     console.log(`server started on port ${PORT}`);
