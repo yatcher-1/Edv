@@ -448,7 +448,7 @@
     </div>
 </section>
 
-<section id="blogs">
+<section id="blogs" class="pb-5">
     <div class="container-fluid">
         <h1 class="text-left fw-bold blog-title">Industry Insights 👀<img class="turn-down-arrow" src="/turn down.png"
                 alt="turn-down-arrow-image"></h1>
@@ -466,7 +466,14 @@
                                     <hr class="hr hr-blurry position-relative" style="width: 16rem;" />
                                     <h5 class="card-title"><%=post.title%></h5>
                                     <p class="card-text"><%=post.content%></p>
-                                    <a href="#" class="btn btn-dark">Go somewhere</a>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <a href="/Blogs/<%=post._id%>" class="btn btn-dark">Read More!</a>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <a href="/Blogs" class="btn btn-outline-dark">View More!</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -495,7 +502,7 @@
                 src="/turn down.png" alt="turn-down-arrow-image"></h5>
     </div>
     <div class="container-fluid testimonial-box">
-        <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="row mb-2" data-masonry='{"percentPosition": true }'>
             <div class="col-sm-6 col-lg-4 mb-4">
                 <div class="card p-4">
                     <figure class="p-3 mb-0">
