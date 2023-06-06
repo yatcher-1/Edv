@@ -43,6 +43,16 @@ const connectDB = async () =>{
         }
       });
     });
+    app.get("/Blogs/:postId", function(req, res){
+      const requestPostId = req.params.postId;
+        Post.findOne({_id:requestPostId}).then(function(post){
+              res.render("blog", {
+                title: post.title,
+                content: post.content,
+                post: post.class
+              });
+            });
+    });
     console.log("connection to mong sucssefull")
   } catch (error) {
     console.log(error);
