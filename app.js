@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 
-const connectDB = async () =>{
+const connectDB = async () => {
   try {
     await mongoose.connect("mongodb+srv://Yatcher_01:Jaguar123@new.nufxqpo.mongodb.net/blogDB", {useNewUrlParser:true});
     const postSchema = {
@@ -54,11 +54,11 @@ const connectDB = async () =>{
               });
             });
     });
-    console.log("connection to mong sucssefull")
+    console.log("connection to mong sucssefull");
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 connectDB();
 
