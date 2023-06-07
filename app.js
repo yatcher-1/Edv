@@ -35,7 +35,7 @@ const connectDB = async () =>{
       });
     });
     app.get("/Blogs", function(req, res){
-      const limit = 3;
+      const limit = 18;
       Post.find({}).limit(limit).then(function(posts){
         try {
           res.render("blogs", {postsFound: posts});
