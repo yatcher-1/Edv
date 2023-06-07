@@ -1,35 +1,32 @@
 <%- include ("header.ejs")%>
 
-<section id="title-banner">
+<section id="banner" class="pt-5 pb-5">
     <div class="container">
-        <div class="carousel-item active">
-            <div class="row">
-                <h1 class="mb-3 worked-title">Blogs</h1>
-                <div class="col-12 col-md-12 col-lg-6 title">
-                    <h1>Knowledge spread is knowledge gained...</h1>
-                </div>
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #000;">
+            <div class="col-lg-6 px-0">
+                <h1 class="display-4 fst-italic text-capitalize text-white">Blogs The Necessity</h1>
+                <p class="lead my-3 text-white">wjndkjwkvkbj</p>
             </div>
         </div>
-    </div>
-</section>
 
-<section id="blog-display">
-    <div class="container-fluid">
-        <div class="row" role="listbox">
-            <%postsFound.forEach(function(post){%>
-            <div class="col-md-3 p-3">
-                <div class="card">
-                    <img src="/main-ai.svg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <hr class="hr hr-blurry position-relative" style="width: 16rem;" />
-                        <h5 class="card-title"><%=post.title%></h5>
-                        <p class="card-text"><%=post.content%></p>
-                        <a href="/Blogs/<%=post._id%>" class="btn btn-dark">Read More!</a>
+        <div class="container-fluid">
+            <div class="row" role="listbox">
+                <%postsFound.forEach(function(post){%>
+                <div class="col-md-3 p-3">
+                    <div class="card">
+                        <img src="/main-ai.svg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <hr class="hr hr-blurry position-relative" style="width: 16rem;" />
+                            <h5 class="card-title"><%=post.title%></h5>
+                            <p class="card-text"><%=post.content%></p>
+                            <a href="/Blogs/<%=post._id%>" class="btn btn-dark">Read More!</a>
+                        </div>
                     </div>
                 </div>
+                <%});%>
             </div>
-            <%});%>
         </div>
+        <hr>
     </div>
 </section>
 
