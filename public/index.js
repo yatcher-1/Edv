@@ -3,9 +3,9 @@
 const navEl = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 56) {
-    navEl.classList.add("navbar-scrolled", "fixed-top");
+    navEl.classList.add("fixed-top");
   } else if (window.screenY < 56) {
-    navEl.classList.remove("navbar-scrolled", "fixed-top");
+    navEl.classList.remove("fixed-top");
   }
 });
 // navbar hover not hover
