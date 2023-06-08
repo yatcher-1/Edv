@@ -35,16 +35,14 @@ body::-webkit-scrollbar-thumb {
         box-shadow: 15px 0 25px 0 rgba(200, 219, 239, 0.3);
         padding: 0.2% 4%;
     }
-
-    .navbar-scrolled {
+    
+    .fixed-top{
+        padding: 0.1% 2%;
         background-color: #ecf5fe;
-        height: 4.5rem;
         box-shadow: 15px 0 25px 0 rgba(200, 219, 239, 0.3);
-        padding: 0.1% 5%;
     }
 
     #navbar ul {
-        background-color: #ecf5fe;
         padding: 1% 0%;
     }
 
@@ -72,18 +70,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 1080px) {
-    .navbar-scrolled {
+    .fixed-top {
         background-color: #ecf5fe;
         height: 5rem;
-        box-shadow: 15px 0 25px 0 rgba(200, 219, 239, 0.3);
-        padding: 3% 0%;
-        transform: translateY(-15px);
-        max-width: 100%;
-    }
-
-    .fixed-top {
-        transform: translateY(-15px);
-        max-width: 100%;
+        transform: translateY(-10px);
+        padding: 2% 2%;
+        border: 1px solid black;
+        border-radius: 3%;
     }
 
     .navbar ul {
