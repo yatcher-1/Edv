@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 
-const connectDB = async () =>{
+const connectDB = async () => {
   try {
     await mongoose.connect("mongodb+srv://Yatcher_01:Jaguar123@new.nufxqpo.mongodb.net/blogDB", {useNewUrlParser:true});
     const postSchema = {
@@ -25,7 +25,8 @@ const connectDB = async () =>{
     };
     
     const Post = mongoose.model("Post", postSchema);
-    app.get("/", function(req, res){
+
+    app.get("/", await function(req, res){
       Post.find({}).then(function(posts){
         try {
           res.render("comming-soon", {posts: posts});
@@ -34,7 +35,7 @@ const connectDB = async () =>{
         }
       });
     });
-    app.get("/Blogs", function(req, res){
+    app.get("/Blogs", await function(req, res){
       const limit = 18;
       Post.find({}).limit(limit).then(function(posts){
         try {
@@ -44,7 +45,7 @@ const connectDB = async () =>{
         }
       });
     });
-    app.get("/Blogs/:postId", function(req, res){
+    app.get("/Blogs/:postId", await function(req, res){
       const requestPostId = req.params.postId;
         Post.findOne({_id:requestPostId}).then(function(post){
               res.render("blog", {
@@ -54,11 +55,11 @@ const connectDB = async () =>{
               });
             });
     });
-    console.log("connection to mong sucssefull")
+    console.log("connection to mong sucssefull");
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 connectDB();
 
