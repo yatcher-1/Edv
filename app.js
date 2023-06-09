@@ -28,7 +28,7 @@ const connectDB = async () =>{
     app.get("/", function(req, res){
       Post.find({}).then(function(posts){
         try {
-          res.render("home", {posts: posts});
+          res.render("comming-soon", {posts: posts});
         } catch (error) {
         console.log(error);
         }
