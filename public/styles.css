@@ -1161,6 +1161,15 @@ body::-webkit-scrollbar-thumb {
         border-bottom: 5px solid #0083ff;
         box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
     }
+
+    .card-text{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -1194,6 +1203,14 @@ body::-webkit-scrollbar-thumb {
 
     .carousel-inner .carousel-item>div:first-child {
         display: block;
+    }
+    .card-text{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 1.2rem;
+        line-height: 1.5;
     }
 }
 
