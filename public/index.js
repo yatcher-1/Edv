@@ -1,13 +1,13 @@
 // scroll animation
 
-const navEl = document.querySelector(".navbar");
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= 56) {
-    navEl.classList.add("fixed-top");
-  } else if (window.screenY < 56) {
-    navEl.classList.remove("fixed-top");
-  }
-});
+// const navEl = document.querySelector(".navbar");
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY >= 56) {
+//     navEl.classList.add("fixed-top");
+//   } else if (window.screenY < 56) {
+//     navEl.classList.remove("fixed-top");
+//   }
+// });
 // navbar hover not hover
 
 const classList = document.querySelectorAll(".dropdown");
@@ -71,7 +71,7 @@ particlesJS("particles-js", {
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#000"
       },
       "shape": {
         "type": "circle",
@@ -99,7 +99,7 @@ particlesJS("particles-js", {
         }
       },
       "size": {
-        "value": 2,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": true,
