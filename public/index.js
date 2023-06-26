@@ -10,6 +10,15 @@
 // });
 // navbar hover not hover
 
+
+  const loader = document.getElementById("preloader");
+  window.addEventListener("load", function (){
+    loader.style.display = "none";
+    loader.style.zIndex = -100;
+  });
+
+
+
 const classList = document.querySelectorAll(".dropdown");
     
 window.addEventListener("resize", window.onload=function () {
