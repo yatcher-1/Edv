@@ -129,6 +129,10 @@ a {
     .carousel-control-next {
         display: none;
     }
+
+    .navbar-toggler-icon{
+        background-image: url(/right-arrow.webp);
+    }
 }
 
 .dropdown-hover>.dropdown-toggle:active {
