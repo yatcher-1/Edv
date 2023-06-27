@@ -62,8 +62,9 @@ a {
     .navbar {
         z-index: 99;
         position: fixed;
+        left: 0;
         background: transparent !important;
-        backdrop-filter: blur(10px) !important;
+        backdrop-filter: blur(20px) !important;
         width: 100%;
         height: 50px;
     }
@@ -162,6 +163,21 @@ a {
         padding: 4% 3% 3%;
     }
 
+    .opaque{
+        position: absolute;
+        top: 15vh;
+        left: 10vh;
+        right: 0;
+        bottom: 0;
+        width: 70vw;
+        border: 1px solid transparent;
+        border-radius: 50px;
+        background: url(/some1.webp) no-repeat;
+        background-size: cover;
+        filter: blur(70px);
+        z-index: -1;
+    }
+
     .carousel-item {
         height: 90vh;
     }
@@ -216,30 +232,24 @@ a {
 
     #hero .carousel-control-next-icon {
         position: absolute;
-        top: 50vh;
+        top: 80vh;
         right: 10%;
         width: 30%;
         background-image: url(/right-arrow.webp);
         border: 2px solid white;
         border-radius: 50%;
+        transform: translateX(-28rem);
     }
     
     #hero .carousel-control-prev-icon {
         position: absolute;
-        top: 50vh;
+        top: 80vh;
         left: 10%;
         width: 30%;
         background-image: url(/left-arrow.webp);
         border: 2px solid white;
         border-radius: 100%;
-    }
-
-    #hero .carousel-control-prev-icon:hover{
-        transform: translateX(-4px);
-    }
-
-    #hero .carousel-control-next-icon:hover{
-        transform: translateX(4px);
+        transform: translateX(54rem);
     }
 
     img.title-img {
