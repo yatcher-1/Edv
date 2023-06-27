@@ -34,8 +34,6 @@ window.addEventListener("resize", window.onload=function () {
       }
 }); 
 
-
-
 function offset(el) {
   var rect = el.getBoundingClientRect(),
   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
