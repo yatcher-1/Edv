@@ -1,13 +1,19 @@
 // scroll animation
 
-// const navEl = document.querySelector(".navbar");
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY >= 56) {
-//     navEl.classList.add("fixed-top");
-//   } else if (window.screenY < 56) {
-//     navEl.classList.remove("fixed-top");
-//   }
-// });
+const navEl = document.querySelectorAll("#navbar .nav-link");
+const brand = document.querySelector(".navbar-brand");
+window.addEventListener("scroll", () => {
+  navEl.forEach((e)=>{
+    if (window.scrollY >= 800) {
+      e.classList.add("text-dark");
+      brand.classList.add("text-dark");
+    } else if (window.screenY < 56) {
+      e.classList.remove("text-dark");
+      brand.classList.remove("text-dark");
+    }
+  })
+});
+
 // navbar hover not hover
 const cursor = document.querySelector('.cursor');
 
