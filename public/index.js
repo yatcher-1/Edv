@@ -14,6 +14,7 @@ window.addEventListener("scroll", () => {
   })
 });
 
+
 // navbar hover not hover
 const cursor = document.querySelector('.cursor');
 
