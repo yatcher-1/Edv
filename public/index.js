@@ -1,18 +1,18 @@
 // scroll animation
 
-const navEl = document.querySelectorAll("#navbar .nav-link");
-const brand = document.querySelector(".navbar-brand");
-window.addEventListener("scroll", () => {
-  navEl.forEach((e)=>{
-    if (window.scrollY >= 800) {
-      e.classList.add("text-dark");
-      brand.classList.add("text-dark");
-    } else if (window.screenY < 56) {
-      e.classList.remove("text-dark");
-      brand.classList.remove("text-dark");
-    }
-  })
-});
+// const navEl = document.querySelectorAll("#navbar .nav-link");
+// const brand = document.querySelector(".navbar-brand");
+// window.addEventListener("scroll", () => {
+//   navEl.forEach((e)=>{
+//     if (window.scrollY >= 800) {
+//       e.classList.add("text-dark");
+//       brand.classList.add("text-dark");
+//     } else if (window.screenY < 56) {
+//       e.classList.remove("text-dark");
+//       brand.classList.remove("text-dark");
+//     }
+//   })
+// });
 
 
 // navbar hover not hover
