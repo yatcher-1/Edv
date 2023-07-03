@@ -1307,11 +1307,11 @@ a {
     }
 
     .blog-title {
-        padding: 5% 3%;
+        padding: 3% 3%;
     }
 
     .blog-inner {
-        padding: 5% 1% 0%;
+        padding: 2% 1% 2%;
     }
 
     #blogs .carousel-control-prev {
@@ -1370,13 +1370,13 @@ a {
 @media only screen and (max-width: 1080px) {
     #blogs {
         height: 100vh;
-        padding: 10% 1%;
+        padding: 4% 1%;
         text-align: center;
         background-color: #000;
     }
 
     .blog-title {
-        padding: 15% 0% 2%;
+        padding: 4% 0% 2%;
         font-size: 1.7rem;
     }
 
@@ -1405,16 +1405,22 @@ a {
 @media only screen and (min-width: 1366px) {
 
     #testimonial {
-        background-color: #fff;
+        padding-top: 2%!important;
+        background-color: #e9ecef;
+        border-radius: 45px;
     }
 
     .testimonial-box {
-        padding: 2% 3%;
+        padding: 2% 7%;
+    }
+
+    #testimonial .card{
+        border-radius: 25px;
     }
 
     #testimonial .card:hover {
         transform: translateY(-10px);
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
     }
 
 }
@@ -1436,8 +1442,7 @@ a {
 
     #testimonial .card {
         padding: 10%;
-        border: 1px solid #273f5b;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
     }
 }
 
@@ -1445,9 +1450,23 @@ a {
 /* footer section */
 /* footer section starts */
 
-#footer {
-    height: 100vh;
-    padding: 6% 3% 1%;
-    background-color: #000;
-    color: #ecf5fe !important;
+@media only screen and (min-width: 1366px) {
+    #footer {
+        height: 100vh;
+        padding: 3% 3% 2%;
+        background-color: #000;
+        color: #ecf5fe !important;
+    }
+    
+    .image-footer{
+        padding: 2% 1%;
+        animation: mover 1s infinite alternate;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .image-footer{
+        display: none;
+    }
+
 }
