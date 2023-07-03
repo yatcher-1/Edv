@@ -715,7 +715,6 @@ a {
         padding-left: 2rem;
         padding-top: 1rem;
         background-color: transparent;
-        color: #273f5b;
     }
 
     .service-title-box h1 {
@@ -1282,9 +1281,8 @@ a {
 /* medium and up screens */
 @media only screen and (min-width: 1366px) {
     #blogs {
-        height: 110vh;
-        padding: 1% 1%;
-        background-color: #000;
+        height: 100vh;
+        padding: 5% 2%;
     }
 
     .carousel-inner .carousel-item-end.active,
@@ -1309,30 +1307,52 @@ a {
     }
 
     .blog-title {
-        color: #273f5b;
-        padding: 3% 3%;
+        padding: 5% 3%;
     }
 
     .blog-inner {
-        padding: 1% 1%;
+        padding: 5% 1% 0%;
+    }
+
+    #blogs .carousel-control-prev {
+        height: 20px;
+    }
+
+    #blogs .carousel-control-next {
+        height: 20px;
     }
 
     #blogs .carousel-control-next-icon {
         position: absolute;
-        top: 30vh;
+        top: 50vh;
         right: 0%;
-        filter: invert(100%);
+        width: 30%;
+        background-image: url(/right-arrow.webp);
+        border: 2px solid white;
+        border-radius: 50%;
+        transform: translateX(4rem);
     }
 
     #blogs .carousel-control-prev-icon {
         position: absolute;
-        top: 30vh;
+        top: 50vh;
         left: 0%;
-        filter: invert(100%);
+        width: 30%;
+        background-image: url(/left-arrow.webp);
+        border: 2px solid white;
+        border-radius: 100%;
+        transform: translateX(-4rem);
     }
 
     #blogs .card {
         width: 18rem;
+        border-radius: 45px;
+        background-color: #212121;
+    }
+
+    #blogs h1{
+        letter-spacing: 0px;
+        font-size: 2rem;
     }
 
     #blogs .card:hover {
@@ -1341,37 +1361,33 @@ a {
         box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
     }
 
-    .card-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        font-size: 1.2rem;
-        line-height: 1.5;
+    .card-img-top{
+        animation: mover 1s infinite alternate;
     }
+
 }
 
 @media only screen and (max-width: 1080px) {
     #blogs {
-        height: 110vh;
-        padding: 6% 4% 5%;
-        background-color: #ecf5fe;
+        height: 100vh;
+        padding: 10% 1%;
         text-align: center;
+        background-color: #000;
     }
 
     .blog-title {
-        color: #273f5b;
-        padding: 6% 0%;
+        padding: 15% 0% 2%;
         font-size: 1.7rem;
     }
 
     .blog-inner {
-        padding: 4% 3.5% 10% 6%;
+        padding: 4% 3.5% 4% 6%;
     }
-
+    
     #blogs .card {
-        width: 18rem;
-        border: 1px solid black;
+        background-color: #212121;
+        width: 16rem;
+        border-radius: 25px;
         border-bottom: 5px solid #0083ff;
         box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
     }
@@ -1384,24 +1400,12 @@ a {
         display: block;
     }
 
-    .card-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        font-size: 1.2rem;
-        line-height: 1.5;
-    }
 }
 
 @media only screen and (min-width: 1366px) {
 
     #testimonial {
         background-color: #fff;
-    }
-
-    .testimonial-title {
-        color: #273f5b;
     }
 
     .testimonial-box {
@@ -1417,21 +1421,23 @@ a {
 
 @media only screen and (max-width: 1080px) {
     #testimonial {
-        background-color: #fff;
+        background-color: #e9ecef;
+        border-radius: 25px;
+        padding-top: 0%!important;
     }
 
     .testimonial-box {
         height: 100vh;
         overflow: scroll;
-        padding: 5% 5%;
+        padding: 3% 5%;
         border: 1px solid black;
         border-radius: 5%;
     }
 
     #testimonial .card {
+        padding: 10%;
         border: 1px solid #273f5b;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
     }
 }
 
