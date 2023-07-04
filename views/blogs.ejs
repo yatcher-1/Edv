@@ -1,11 +1,11 @@
 <%- include ("header.ejs")%>
 
-<section id="banner" class="pt-5 pb-5">
+<section id="banner">
     <div class="container">
-        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #000;">
-            <div class="col-lg-6 px-0">
-                <h1 class="display-4 fst-italic text-capitalize text-white">Blogs The Necessity</h1>
-                <p class="lead my-3 text-white">wjndkjwkvkbj</p>
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis border border-light" style="border-radius: 50px!important; text-align: center;">
+            <div>
+                <h1 class="display-4 fst-italic text-capitalize">Blogs The Necessity</h1>
+                <p class="lead my-3">wjndkjwkvkbj</p>
             </div>
         </div>
 
@@ -14,26 +14,26 @@
                 <%postsFound.forEach(function(post){%>
                 <div class="col-md-3 p-3">
                     <div class="card">
-                        <img src="/influencer.svg" class="card-img-top" alt="...">
+                        <img src="/digital.webp" alt="...">
                         <div class="card-body">
-                            <hr class="hr hr-blurry position-relative" style="width: 16rem;" />
-                            <h5 class="card-title"><%=post.title%></h5>
+                            <hr class="hr text-light position-relative" style="width: 16rem;" />
+                            <h1><%=post.title%></h1>
                             <p class="card-text"><%=post.content%></p>
-                            <a href="/Blogs/<%=post._id%>" class="btn btn-dark">Read More!</a>
+                            <a href="/Blogs/<%=post._id%>" class="btn btn-outline-light">Read More!</a>
                         </div>
                     </div>
                 </div>
                 <%});%>
             </div>
         </div>
-        <hr>
+        <hr class="text-light py-5">
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center pagination-lg">
-              <li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a></li>
+              <li class="page-item"><a class="page-link bg-dark" href="#"><span aria-hidden="true">&laquo;</span></a></li>
+              <li class="page-item"><a class="page-link bg-dark" href="#">1</a></li>
+              <li class="page-item"><a class="page-link bg-dark" href="#">2</a></li>
+              <li class="page-item"><a class="page-link bg-dark" href="#">3</a></li>
+              <li class="page-item"><a class="page-link bg-dark" href="#"><span aria-hidden="true">&raquo;</span></a></li>
             </ul>
           </nav>
     </div>

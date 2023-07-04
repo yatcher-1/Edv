@@ -78,6 +78,10 @@ app.get("/Web-Dev", function (req, res) {
   res.render("webdesign");
 });
 
+app.get("/Reco", function (req, res) {
+  res.render("reco");
+});
+
 app.get("/About-Us", function (req, res) {
     res.render("about");
 });
