@@ -20,7 +20,7 @@ html {
         background: transparent;
         pointer-events: none;
         z-index: 111;
-        border: 3px solid white;
+        border: 3px solid black;
         transition: all 0.2s ease-out;
         animation: moveCursor1 .5s infinite alternate;
     }
@@ -28,7 +28,7 @@ html {
     .expand {
         background: transparent;
         animation: moveCursor2 .5s forwards;
-        border: 1px solid #000;
+        border: 1px solid white;
     }
 
     @keyframes moveCursor1 {
@@ -85,7 +85,7 @@ h1 {
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
     letter-spacing: 3px;
-    background-image: url(/giphy.webp);
+    background-image: url("/giphy.webp");
     background-size: cover;
     color: transparent;
     -moz-background-clip: text;
@@ -95,11 +95,10 @@ h1 {
 p {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: lighter;
-    color: #c1c1c1;
 }
 
 a {
-    color: #c1c1c1 !important;
+    color: #c1c1c1;
 }
 
 .brand-logo {
@@ -150,7 +149,8 @@ a {
     }
 
     #navbar ul li {
-        margin-right: 2.5rem;
+        margin-right: 0.5rem;
+        font-weight: 400;
     }
 
     #navbar .col-lg-2 {
@@ -162,7 +162,9 @@ a {
         transform: translateY(-50rem);
         left: 0;
         transition: all 0.5s;
-        background-color: #000;
+        background-color: #F7F9FB;
+        border-bottom: 1px solid black;
+        border-radius: 50px;
     }
 
     .dropdown-hover:hover>.dropdown-menu {
@@ -172,11 +174,18 @@ a {
     }
 
     .dropdown-hover .list-group-item {
-        background-color: #000;
+        background-color: #3DC2CC;
+        color: #F7F9FB!important;
+        font-weight: 500;
     }
 
     .list-group-item:hover {
         transform: translateX(10px);
+    }
+
+    .list-group-item:last-child{
+        border-bottom: 1px solid transparent;
+        border-bottom-left-radius: 50px;
     }
 }
 
@@ -296,7 +305,7 @@ a {
     .title-img {
         width: 100%;
         padding: 1% 5% 3% 3%;
-        opacity: 90%;
+        /* opacity: 90%;     */
     }
 
     #hero h1 {
@@ -499,6 +508,64 @@ a {
 
 }
 
+/* objective start */
+
+@media only screen and (min-width: 1366px) {
+
+    #objective{
+        height: 100vh;
+        padding: 5% 7%;
+    }
+
+    .main-objective{
+        padding: 3% 5%;
+        display: flex;
+    }
+    
+    .mission{
+        background-color: #212121;
+        color: white;
+        height: 60vh;
+        border-top-left-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-image: url(/vison-ai.webp);
+        background-size: contain;
+        background-blend-mode: overlay;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vision{
+        background-color: #99e2e7;
+        height: 60vh;
+        border-bottom-right-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-image: url(/mission.webp);
+        background-size: contain;
+        background-blend-mode: overlay;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+
+    .text-objective{
+        padding: 0% 3%;
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 1080px) {
+
+    
+
+}
+
 
 /* timeline start */
 /* timeline start box */
@@ -510,7 +577,7 @@ a {
     }
 
     ul.timeline-list {
-        background-color: #3DC2CC;
+        background-color: #99e2e7;
         position: relative;
         margin: 0;
         padding: 5% 3%;
@@ -520,10 +587,9 @@ a {
     ul.timeline-list:before {
         position: absolute;
         content: "";
-        width: 5px;
+        width: 1px;
         height: 100%;
-        border: 2px dashed #273f5b;
-        background-color: #F7F9FB;
+        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
         left: 50%;
         top: 0;
         -webkit-transform: translateX(-50%);
@@ -534,14 +600,17 @@ a {
         position: relative;
         clear: both;
         display: table;
+        width: 100%;
+        /* border: 1px solid red; */
+        padding: 4% 4%;
     }
 
-    .timeline_content {
-        border-radius: 5px;
+    ul.timeline-list p {
+        color: #F7F9FB!important;
     }
 
-    ul.timeline-list li .timeline_content {
-        color: #273f5b;
+
+    ul.timeline-list li.timeline_content {
         padding: 1% 3% 0%;
         float: left;
         text-align: center;
@@ -559,34 +628,32 @@ a {
         letter-spacing: 1px;
     }
     
-    .timeline_content p {
-        font-size: 16px;
-        letter-spacing: 1px;
-    }
 
-    .content-box{
-        padding: 5% 4%;
-        transform: translateX(10px);
-    }
 
     ul.timeline-list li:before {
         position: absolute;
         content: "";
         width: 25px;
         height: 25px;
-        background-color: blueviolet;
+        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
         left: 50%;
         top: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         border-radius: 50%;
     }
-    
-    .timeline_content img {
-        background: linear-gradient(.15turn, #30ff57, #0FFF50);
+
+    .content-box{
+        text-align: center;
+        justify-content: center;
+    }
+
+    .content-box img{
+        background-color: transparent;
+        border: 1px solid #F7F9FB;
         border-radius: 10%;
         height: 25rem;
-        transform: translateX(-20px);
+        width: 80%;
         animation: mover 1s infinite alternate;
     }
 }
