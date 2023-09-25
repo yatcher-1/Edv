@@ -144,6 +144,10 @@ a {
         color: #1C1124!important;
     }
 
+    .expertise{
+        color: #3DC2CC!important;
+    }
+
     #navbar ul {
         padding: 1% 0%;
     }
@@ -760,10 +764,11 @@ a {
         overflow-x: hidden;
         display: flex;
         position: sticky;
-        top: 25vh;
+        top: 30vh;
     }
 
     .section-hori {
+        padding: 2% 0%;
         min-width: 65vw;
         display: flex;
         justify-content: center;
@@ -800,7 +805,6 @@ a {
         border-radius: 20px;
         min-height: 100vh;
         overflow: auto;
-
     }
 
     .service-title-box {
@@ -1438,8 +1442,8 @@ a {
         top: 50vh;
         right: 0%;
         width: 30%;
-        background-image: url(/right-arrow.webp);
-        border: 2px solid white;
+        background-image: url(/right-arrow-new.png);
+        border: 2px solid black;
         border-radius: 50%;
         transform: translateX(4rem);
     }
@@ -1449,8 +1453,8 @@ a {
         top: 50vh;
         left: 0%;
         width: 30%;
-        background-image: url(/left-arrow.webp);
-        border: 2px solid white;
+        background-image: url(/left-arrow-new.png);
+        border: 2px solid black;
         border-radius: 100%;
         transform: translateX(-4rem);
     }
@@ -1459,7 +1463,8 @@ a {
     #banner .card {
         width: 18rem;
         border-radius: 45px;
-        background-color: #212121;
+        background-color: #F7F9FB;
+        border: 1px solid black;
     }
 
     #blogs h1{
