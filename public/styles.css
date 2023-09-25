@@ -246,7 +246,7 @@ a {
     }
 
     .navbar-toggler-icon {
-        background-image: url(/right-arrow.webp);
+        background-image: url(/right-arrow-new.png);
         background-blend-mode: darken;
     }
 }
@@ -871,7 +871,7 @@ a {
     #worked {
         height: 80vh;
         text-align: left;
-        background-color: #000;
+        background-color: #F7F9FB;
         padding: 10% 0%;
         overflow: hidden;
     }
@@ -881,7 +881,7 @@ a {
     }
 
     .marquee-list {
-        background-color: #000;
+        background-color: #F7F9FB;
         border-top: #a4a8a7 2px solid;
         border-bottom: #a4a8a7 2px solid;
         width: fit-content;
@@ -909,7 +909,7 @@ a {
     }
 
     .marquee-list ul {
-        background-color: #000;
+        background-color: #F7F9FB;
         display: -webkit-box;
         display: -moz-box;
         display: -webkit-flex;
@@ -956,7 +956,7 @@ a {
         text-transform: uppercase;
         font-size: 3rem;
         white-space: nowrap;
-        color: #d3d3d3;
+        color: #000;
     }
 
     /* .marquee-list li:before {
@@ -1254,7 +1254,7 @@ a {
 @media only screen and (min-width: 1366px) {
 
     .section-work-data {
-        background: linear-gradient(.15turn, #30ff57, #0FFF50);
+        background-color: #99e2e7;
         text-align: center;
         transition: all 0.7s linear;
         color: #000;
@@ -1278,7 +1278,7 @@ a {
 @media only screen and (max-width: 1080px) {
    
     .section-work-data {
-        background: linear-gradient(.15turn, #30ff57, #0FFF50);
+        background-color: #99e2e7;
         text-align: center;
         transition: all 0.7s linear;
         color: #212121;
@@ -1601,8 +1601,8 @@ a {
     #footer {
         height: 100vh;
         padding: 3% 3% 2%;
-        background-color: #000;
-        color: #ecf5fe !important;
+        background-color: #F7F9FB;
+        color: #000!important;
     }
     
     .image-footer{
