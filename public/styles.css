@@ -525,7 +525,7 @@ a {
     .mission{
         background-color: #212121;
         color: white;
-        height: 60vh;
+        height: 70vh;
         border-top-left-radius: 50px;
         display: flex;
         align-items: center;
@@ -538,9 +538,14 @@ a {
         background-repeat: no-repeat;
     }
 
+    .mission h2, 
+    .vision h2{
+        padding-bottom: 10%;
+    }
+
     .vision{
         background-color: #99e2e7;
-        height: 60vh;
+        height: 70vh;
         border-bottom-right-radius: 50px;
         display: flex;
         align-items: center;
@@ -565,6 +570,7 @@ a {
     
 
 }
+
 
 
 /* timeline start */
