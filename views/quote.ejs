@@ -1,0 +1,92 @@
+<%- include ("header.ejs")%>
+
+<section id="banner1">
+    <div class="container">
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis border border-dark"
+            style="border-radius: 50px!important; text-align: center;">
+            <div>
+                <h1 class="display-4 fst-italic text-capitalize">Get A Quote!</h1>
+            </div>
+            <a class="btn btn-outline-dark btn-lg" href="#contact-form">To the Form</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact-form">
+    <div class="container contact-form-box">
+        <span id="success" class="fw-bolder text-center text-capitalize p-2"></span>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="row">
+                    <div class="col-lg-6 box1"></div>
+                    <div class="col-lg-6 box2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 box3"></div>
+                    <div class="col-lg-6 box4"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 contact-form">
+                <form id="myForm needs-validation" class="row g-2" name="submit-to-google-sheet2">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label text-dark">First Name</label>
+                        <input type="text" name="firstName" class="form-control" id="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label text-dark">Last Name</label>
+                        <input type="text" name="lastName" class="form-control" id="lastName" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="email" class="form-label text-dark">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="contactNumber" class="form-label text-dark">Contact No.</label>
+                        <input type="tel" name="contactNumber" class="form-control" id="contactNum" required>
+                    </div>
+                    <div class="col-md-12">
+                    <label for="validationCustom04" class="form-label text-dark">Select a Service</label>
+                    <select class="form-select border-0 rounded-pill" id="validationCustom04" name="selectService" aria-label="Default select example" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="Ecomerce Management">Ecomerce Management</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Web-Design & Deelopment">Web-Design & Deelopment</option>
+                        <option value="Influencer Marketing">Influencer Marketing</option>
+                        <option value="Business Development">Business Development</option>
+                    </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="exampleFormControlTextarea1" class="form-label text-dark">Message</label>
+                        <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea required>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <button type="submit" class="btn btn-outline-dark btn-lg border rounded-pill fw-bolder my-4">Sign Up!</button>
+                    </div>
+                </form>
+            </div>
+            <hr class="text-dark my-5">
+        </div>
+    </div>
+</section>
+
+<script>
+    
+// form script
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyxPyq-Y90eB3unz0x5_oJUeebmJOQLqVdCyuGkaD-Aj92Ahd1IaFmW5ffhYdTxLYfQ/exec'
+  const form = document.forms['submit-to-google-sheet2']
+  const success = document.getElementById("success") 
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        success.innerHTML = "Thanks for providing your query!";
+        setTimeout(()=>{
+          success.innerHTML = "";
+        }, 5000)
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  });
+</script>
+
+<%- include ("footer.ejs")%>

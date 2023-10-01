@@ -83,11 +83,15 @@ app.get("/Reco", function (req, res) {
 });
 
 app.get("/About-Us", function (req, res) {
-    res.render("about");
+    res.redirect("/");
 });
 
 app.get("/Contact", function (req, res) {
     res.render("contact");
+});
+
+app.get("/get-a-quote", function (req, res) {
+    res.render("quote");
 });
 
 app.get("/Career", function (req, res) {
