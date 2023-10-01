@@ -1100,20 +1100,22 @@ a {
     #worked {
         height: 80%;
         text-align: left;
-        padding: 10% 0%;
+        padding: 3% 0% 6%;
         overflow: hidden;
+        background-color: #99e2e7;
+        margin-top: 60px;
     }
 
     .worked-title {
         font-size: 1.8rem;
         width: 80%;
-        padding: 10% 0% 3%;
+        padding: 3% 0% 3%;
     }
 
     .marquee-list {
-        background-color: #000;
-        border-top: #a4a8a7 2px solid;
-        border-bottom: #a4a8a7 2px solid;
+        background-color: #F7F9FB;
+        border-top: #000 2px solid;
+        border-bottom: #000 2px solid;
         width: fit-content;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -1131,11 +1133,11 @@ a {
         align-items: center;
         overflow: hidden;
         padding: 1% 1%;
-        -webkit-animation: marquee 10s linear infinite running;
-        -moz-animation: marquee 10s linear infinite running;
-        -o-animation: marquee 10s linear infinite running;
-        -ms-animation: marquee 10s linear infinite running;
-        animation: marquee 10s linear infinite running;
+        -webkit-animation: marquee 15s linear infinite running;
+        -moz-animation: marquee 15s linear infinite running;
+        -o-animation: marquee 15s linear infinite running;
+        -ms-animation: marquee 15s linear infinite running;
+        animation: marquee 15s linear infinite running;
     }
 
     .marquee-list ul {
@@ -1155,7 +1157,7 @@ a {
     }
 
     .marquee-list li {
-        color: #fff;
+        color: #000;
         min-width: fit-content;
         white-space: nowrap;
         text-align: center;
@@ -1439,7 +1441,7 @@ a {
 
     #title-banner,
     #contact-form {
-        height: 100vh;
+        height: 50vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1468,6 +1470,25 @@ a {
 
     .contact-form {
         padding: 1% 10% 2%;
+    }
+
+    .banner-image-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1% 3% 10%;
+    }
+
+    .banner-image-box-ecom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3% 1% 0%;
+    }
+    
+    .banner-image{
+        /* height: 50vh; */
+        width: 100%;
     }
 
 }
@@ -1573,10 +1594,10 @@ a {
 
 @media only screen and (max-width: 1080px) {
     #blogs {
-        height: 100vh;
-        padding: 4% 1%;
+        height: 60vh;
+        padding: 4% 1% 0%;
         text-align: center;
-        background-color: #000;
+        background-color: #F7F9FB;
     }
 
     .blog-title {
@@ -1587,9 +1608,11 @@ a {
     .blog-inner {
         padding: 4% 3.5% 4% 6%;
     }
+
     #blogs .card,
     #banner .card {
-        background-color: #212121;
+        background-color: #F7F9FB;
+        border: 1px solid black;
         width: 16rem;
         border-radius: 25px;
         border-bottom: 5px solid #0083ff;
@@ -1637,7 +1660,16 @@ a {
 
     #banner {
         padding: 20% 2% 0%;
-        border-radius: 20px !important;
+        background-color: #99e2e7;
+        height: 40vh;
+        width: 100%;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    #banner1{
+        padding: 7% 2%;
+        border-radius: 50px !important;
     }
 }
 
@@ -1647,7 +1679,7 @@ a {
 @media only screen and (min-width: 1366px) {
 
     #testimonial {
-        padding-top: 2% !important;
+        padding-top: 2%!important;
         background-color: #e9ecef;
         border-radius: 45px;
     }
@@ -1670,8 +1702,9 @@ a {
 @media only screen and (max-width: 1080px) {
     #testimonial {
         background-color: #e9ecef;
-        border-radius: 25px;
-        padding-top: 0% !important;
+        border-radius: 50px;
+        padding-top: 0%!important;
+        margin-bottom: 60px;
     }
 
     .testimonial-box {
@@ -1700,17 +1733,34 @@ a {
         background-repeat: no-repeat;
         background-position: bottom;
     }
-/* 
-    .image-footer {
-        padding: 2% 1%;
-        animation: mover 1s infinite alternate;
-    } */
+
+    .footer-email{
+        background-color: transparent;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+        border-bottom: 1px solid black;
+   }
 }
 
 @media only screen and (max-width: 1080px) {
+    #footer{
+        background-color: #fff!important;
+    }
+
     .image-footer {
         display: none;
     }
+
+    .footer-email{
+        background-color: transparent;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+        border-bottom: 1px solid black;
+   }
 
 }
 
@@ -1758,7 +1808,51 @@ a {
         /* justify-content: center; */
 
     }
+}
 
+@media only screen and (max-width: 1080px) {
+    
+    #ecomerce {
+        border: 1px solid #3DC2CC;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: white;
+        border-top: 0px;
+        background-image: url("/pattern.svg");
+        background-size: cover;
+        background-position: 50vh;
+        /* background-repeat: no-repeat; */
+    }
+
+    #nav-tab .nav-link {
+        width: 11%;
+    }
+
+    .ecomerce-nav-box {
+        /* background-color: white; */
+        color: #fff !important;
+
+    }
+
+    #nav-tab .active {
+        /* background-color: #31d2f2; */
+        background-color: #F7F9FB;
+        border: 1px solid #3DC2CC;
+
+    }
+
+    #nav-tab .nav-link:hover {
+        background-color: #3DC2CC;
+        color: white !important;
+    }
+
+    .ecomerce-content-box {
+        height: 50vh;
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+
+    }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -1840,18 +1934,4 @@ a {
     padding: 2% 5%;
 }
 
-.footer-email{
-     background-color: transparent;
-     border-top: 0;
-     border-right: 0;
-     border-left: 0;
-     border-radius: 0;
-     border-bottom: 1px solid black;
-}
 
-@media only screen and (max-width: 1080px) {
-    .image-footer{
-        display: none;
-    }
-
-}
