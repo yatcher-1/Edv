@@ -103,14 +103,14 @@ $breakpoint-min: 1080px;
   
 @media only screen and (max-width: $breakpoint-min) { 
   #protocol{
-      height: 180vh;
+      height: 200vh;
       padding: 2% 4%;
   }
   
   #protocol ul {
     display: flex;
-    min-height: 150vh;
-    max-height: 150vh;
+    min-height: 160vh;
+    max-height: 160vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -151,6 +151,10 @@ $breakpoint-min: 1080px;
         transform: scaleX(1);
         color: #3DC2CC;
       }
+
+      .p-content{
+        display: none;
+      }
     }
     
     .section-title {
@@ -165,17 +169,24 @@ $breakpoint-min: 1080px;
       
       h2 {
         margin: 0;
-        white-space: nowrap;
-        height: 100px;
+        // white-space: nowrap;
+        height: 60%;
         width: 100px;
         border: 2px solid white;
-        border-radius: 50%;
+        transform: rotate(-90deg);
+        // border-radius: 50%;
         background-color: white;
         color: #3DC2CC;
-        padding: 0% 1%;
+        padding: 0% 3%;
+        font-size: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      .p-content{
+        transform: rotate(90deg);
+        width: 100%;
       }
       }
     
