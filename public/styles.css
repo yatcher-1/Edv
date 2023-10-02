@@ -470,8 +470,7 @@ a {
     }
 
     .carousel-indicators {
-        margin-left: 60vw;
-        height: auto;
+        transform: translateY(3rem);
     }
 
     img.title-img {
