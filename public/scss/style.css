@@ -37,10 +37,13 @@
     color: #3DC2CC;
   }
   #protocol li.active .section-content {
-    flex: 4;
+    flex: 5;
     opacity: 1;
-    transform: scaleX(1);
+    transform: translateX(-10%);
     color: #3DC2CC;
+  }
+  #protocol li.active .p-content {
+    display: none;
   }
   #protocol li .section-title {
     flex: 1;
@@ -54,18 +57,18 @@
   }
   #protocol li .section-title h2 {
     margin: 0;
-    transform: rotate(-90deg);
-    white-space: nowrap;
-    height: 50px;
-    width: 50px;
-    border: 2px solid white;
-    border-radius: 50%;
-    background-color: white;
-    color: #3DC2CC;
-    padding: 0% 1%;
+    height: 100%;
+    width: 100%;
+    padding: 0% 3%;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(50%);
+  }
+  #protocol li .section-title .p-content {
+    color: #fff !important;
+    width: 100%;
   }
   #protocol li .section-content {
     flex: 1;
@@ -91,11 +94,12 @@
   }
   #protocol ul {
     display: flex;
-    min-height: 160vh;
-    max-height: 160vh;
+    min-height: 16vh;
+    max-height: 165vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    border: 1px solid black;
     border-radius: 50px;
     list-style-type: none;
   }
@@ -123,9 +127,9 @@
     color: #3DC2CC;
   }
   #protocol li.active .section-content {
-    flex: 4;
+    flex: 5;
     opacity: 1;
-    transform: scaleX(1);
+    transform: translateX(-10%);
     color: #3DC2CC;
   }
   #protocol li.active .p-content {
@@ -143,19 +147,17 @@
   }
   #protocol li .section-title h2 {
     margin: 0;
-    height: 40%;
-    width: 100px;
-    border: 2px solid white;
-    background-color: white;
-    color: #3DC2CC;
+    height: 100%;
+    width: 100%;
     padding: 0% 3%;
-    font-size: 10px;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
   #protocol li .section-title .p-content {
+    color: #fff !important;
     width: 100%;
   }
   #protocol li .section-content {
