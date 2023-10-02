@@ -428,11 +428,13 @@ a {
     }
 
     #hero h1 {
-        font-family: sans-serif;
-        font-weight: bolder;
-        font-size: 3rem;
+        /* font-family: sans-serif; */
+        /* font-weight: bolder; */
+        font-size: 2.3rem;
         line-height: 1.2;
-        text-align: center;
+        text-align: left;
+        /* padding: 2% 5%; */
+        padding: 2% 4% 0%;
     }
 
     #hero .small-heading {
@@ -451,12 +453,20 @@ a {
         text-align: center;
     }
 
+    .carousel-item{
+        padding: 3% 5%;
+    }
+
     .btn-hero {
-        font-size: 1rem;
+        font-size: 0.7rem;
+        margin-left: 1rem;
     }
 
     .title-img {
-        padding: 5% 15%;
+        /* padding: 2% 4% 0%; */
+        display: flex;
+        justify-content: right;
+        align-items: right;
     }
 
     .carousel-indicators {
@@ -1769,6 +1779,7 @@ a {
     .mobile{
         display: none;
     }
+    
     #ecomerce {
         border: 1px solid #3DC2CC;
         border-bottom-right-radius: 10px;
