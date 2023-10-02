@@ -143,10 +143,9 @@
   }
   #protocol li .section-title h2 {
     margin: 0;
-    height: 60%;
+    height: 40%;
     width: 100px;
     border: 2px solid white;
-    transform: rotate(-90deg);
     background-color: white;
     color: #3DC2CC;
     padding: 0% 3%;
@@ -154,9 +153,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(100%);
   }
   #protocol li .section-title .p-content {
-    transform: rotate(90deg);
     width: 100%;
   }
   #protocol li .section-content {
