@@ -123,9 +123,9 @@ $breakpoint-min: 1080px;
   
 @media only screen and (max-width: $breakpoint-min) { 
   #protocol{
-      height: 200vh;
+      min-height: 180vh;
+      max-height: 250vh;
       padding: 2% 4% 0%;
-
   }
   
   #protocol ul {

@@ -89,7 +89,8 @@
 }
 @media only screen and (max-width: 1080px) {
   #protocol {
-    height: 200vh;
+    min-height: 180vh;
+    max-height: 250vh;
     padding: 2% 4% 0%;
   }
   #protocol ul {
