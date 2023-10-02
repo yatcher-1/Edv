@@ -90,18 +90,19 @@
 @media only screen and (max-width: 1080px) {
   #protocol {
     height: 200vh;
-    padding: 2% 4%;
+    padding: 2% 4% 0%;
   }
   #protocol ul {
     display: flex;
-    min-height: 16vh;
-    max-height: 165vh;
+    min-height: 150vh;
+    max-height: 150vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
     border: 1px solid black;
     border-radius: 50px;
     list-style-type: none;
+    background-color: #3DC2CC;
   }
   .title-pro {
     padding: 0.8% 10%;

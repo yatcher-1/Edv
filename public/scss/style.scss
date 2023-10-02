@@ -124,19 +124,21 @@ $breakpoint-min: 1080px;
 @media only screen and (max-width: $breakpoint-min) { 
   #protocol{
       height: 200vh;
-      padding: 2% 4%;
+      padding: 2% 4% 0%;
+
   }
   
   #protocol ul {
     display: flex;
-    min-height: 16vh;
-    max-height: 165vh;
+    min-height: 150vh;
+    max-height: 150vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
     border: 1px solid black;
     border-radius: 50px;
     list-style-type: none;
+    background-color: #3DC2CC;
   }
 
   .title-pro{
