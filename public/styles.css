@@ -1733,21 +1733,31 @@ a {
     #testimonial {
         background-color: #e9ecef;
         border-radius: 50px;
-        padding-top: 0%!important;
+        /* padding-top: 0%!important; */
         margin-bottom: 60px;
+        padding: 0% 3% 10%;
     }
 
     .testimonial-box {
-        height: 100vh;
+        height: 80vh;
         overflow: scroll;
-        padding: 3% 5%;
+        padding: 6% 5%;
         border: 1px solid black;
         border-radius: 5%;
     }
 
+    .testimonial-card{
+        padding: 10% 5%;
+    }
+
     #testimonial .card {
         padding: 10%;
+        width: 90%;
         box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+    }
+
+    blockquote p{
+        font-size: 0.9rem;
     }
 }
 /* footer section */
@@ -1776,7 +1786,7 @@ a {
 
 @media only screen and (max-width: 1080px) {
     #footer{
-        background-color: #fff!important;
+        background-color: #F7F9FB!important;
     }
 
     .image-footer {
