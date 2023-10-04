@@ -79,7 +79,7 @@ app.get("/Web-Dev", function (req, res) {
 });
 
 app.get("/Reco", function (req, res) {
-  res.render("reco");
+  res.render("Reco");
 });
 
 app.get("/About-Us", function (req, res) {
