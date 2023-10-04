@@ -1624,8 +1624,8 @@ a {
 
 @media only screen and (max-width: 1080px) {
     #blogs {
-        height: 60vh;
-        padding: 4% 1% 0%;
+        height: 65vh;
+        padding: 10% 1% 0%;
         text-align: center;
         background-color: #F7F9FB;
     }
@@ -1739,7 +1739,7 @@ a {
     }
 
     .testimonial-box {
-        height: 80vh;
+        height: 100vh;
         overflow: scroll;
         padding: 6% 5%;
         border: 1px solid black;
@@ -1807,7 +1807,7 @@ a {
 
 @media only screen and (min-width: 1366px) {
     .mobile{
-        display: none;
+        display: none!important;
     }
     
     #ecomerce {
@@ -1861,6 +1861,7 @@ a {
 
     .mobile{
         border: 1px solid black;
+        display: flex!important;
     }
     
     #ecomerce {
