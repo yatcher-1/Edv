@@ -732,6 +732,7 @@ a {
         background-color: #99e2e7;
         padding: 6% 2%;
         border-radius: 50px;
+        margin-top: 60px;
     }
 
     .content-box h1{
@@ -941,21 +942,24 @@ a {
 @media only screen and (min-width: 1366px) {
 
     #worked {
-        height: 80vh;
+        height: 61vh;
         text-align: left;
-        background-color: #F7F9FB;
-        padding: 10% 0%;
+        background-color: #99e2e7;
+        padding: 1% 0% 3%;
+        margin-top: 60px;
         overflow: hidden;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
     }
 
     .worked-title {
-        padding: 2% 1%;
+        padding: 4% 1%;
     }
 
     .marquee-list {
         background-color: #F7F9FB;
-        border-top: #a4a8a7 2px solid;
-        border-bottom: #a4a8a7 2px solid;
+        border-top: #000 2px solid;
+        border-bottom: #000 2px solid;
         width: fit-content;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -973,11 +977,11 @@ a {
         align-items: center;
         overflow: hidden;
         padding: 3rem 0rem;
-        -webkit-animation: marquee 10s linear infinite running;
-        -moz-animation: marquee 10s linear infinite running;
-        -o-animation: marquee 10s linear infinite running;
-        -ms-animation: marquee 10s linear infinite running;
-        animation: marquee 10s linear infinite running;
+        -webkit-animation: marquee 15s linear infinite running;
+        -moz-animation: marquee 15s linear infinite running;
+        -o-animation: marquee 15s linear infinite running;
+        -ms-animation: marquee 15s linear infinite running;
+        animation: marquee 15s linear infinite running;
     }
 
     .marquee-list ul {
