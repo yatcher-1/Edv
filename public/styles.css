@@ -256,11 +256,6 @@ a {
         display: none;
     }
 
-    .navbar-toggler-icon {
-        background-image: url(/right-arrow-new.png);
-        background-blend-mode: darken;
-    }
-
     .dropdown-hover>.dropdown-toggle:active {
         pointer-events: none;
     }
@@ -1778,6 +1773,10 @@ a {
         background-position: bottom;
     }
 
+    .footer-brand{
+        font-size: 2rem;
+    }
+
     .footer-email{
         background-color: transparent;
         border-top: 0;
@@ -1791,10 +1790,15 @@ a {
 @media only screen and (max-width: 1080px) {
     #footer{
         background-color: #F7F9FB!important;
+        font-size: 0.8rem;
     }
 
     .image-footer {
         display: none;
+    }
+
+    .footer-brand{
+        font-size: 1.5rem;
     }
 
     .footer-email{
@@ -1874,7 +1878,7 @@ a {
         border-bottom-left-radius: 10px;
         background-color: white;
         border-top: 0px;
-        padding: 10% 2%;
+        padding: 10% 6%;
     }
 
     .nav-box{
