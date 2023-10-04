@@ -1996,7 +1996,7 @@ a {
     }
 
     .digital-content-box{
-        height: 70vh;
+        height: 90vh;
         width: 70vw;
         display: flex;
         justify-content: center;
@@ -2007,7 +2007,7 @@ a {
     }
 
     .digital-content-box p{
-        padding: 2% 6% 0%;
+        padding: 5% 6%;
         display: flex;
         justify-content: center;
         align-items: center;
