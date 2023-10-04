@@ -1576,7 +1576,7 @@ a {
     
     .banner-image{
         /* height: 50vh; */
-        width: 45%;
+        width: 90%;
     }
 
 }
@@ -1771,7 +1771,7 @@ a {
         padding: 20% 2% 0%;
         background-color: #99e2e7;
         height: 40vh;
-        width: 100%;
+        /* width: 100%; */
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
     }
