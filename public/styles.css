@@ -1864,12 +1864,12 @@ a {
     }
 
     .mobile{
-        border: 1px solid black;
+        /* border: 1px solid black; */
         display: flex!important;
     }
     
     #ecomerce {
-        border: 1px solid #3DC2CC;
+        /* border: 1px solid #3DC2CC; */
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         background-color: white;
@@ -1909,6 +1909,25 @@ a {
         border: 1px solid black;
         border-top-right-radius: 50px;
         border-bottom-right-radius: 50px;
+    }
+
+    .digital-content-box{
+        height: 70vh;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .digital-content-box p{
+        padding: 2% 6% 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
     }
 }
 
