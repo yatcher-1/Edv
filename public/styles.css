@@ -383,6 +383,10 @@ a {
         transform: translateX(54rem);
     }
 
+    .web-devlop{
+        font-size: 3.4rem;
+    }
+
     img.title-img {
         -webkit-animation: mover 1s infinite alternate;
         animation: mover 1s infinite alternate;
