@@ -1390,9 +1390,6 @@ a {
     #title-banner,
     #contact-form {
         height: 100vh;
-        /* display: flex;
-        align-items: center;
-        justify-content: center; */
     }
 
     #title-banner {
@@ -1400,9 +1397,6 @@ a {
     }
 
     .contact-form-box {
-        /* display: flex;
-        align-items: center;
-        justify-content: center; */
         padding: 1% 2%;
     }
 
@@ -1436,29 +1430,63 @@ a {
 
     .box1 {
         content: "";
-        background-color: #273f5b;
-        height: 200px;
-        width: 200px;
+        background-color: #5085a5;
+        height: 250px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 15% 10%;
     }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 h5{
+        text-decoration: underline;
+        color: #F7F9FB;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 p{
+        font-size: 0.8rem;
+        color: #F7F9FB;
+    }
+
     .box2 {
         content: "";
-        background-color: #E94057;
-        height: 200px;
-        width: 200px;
-        border-top-right-radius: 100%;  
+        background-color: #31708e;
+        height: 250px;
+        width: 250px;
+        border-top-right-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 15% 1%;
     }
+
     .box3 {
         content: "";
-        background-color: #273f5b;
-        height: 200px;
-        width: 200px;
+        background-color: #5085a5;
+        height: 250px;
+        width: 250px;
         border-bottom-left-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 0% 8%;
     }
     .box4 {
         content: "";
-        background-color: #3DC2CC;
-        height: 200px;
-        width: 200px;
+        background-color: #8fc1e3;
+        height: 250px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 8% 10%;
     }
 
     .banner-image-box{
@@ -1479,6 +1507,19 @@ a {
         /* height: 50vh; */
         width: 45%;
     }
+
+    .quote-image-box{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        padding: 6% 6% 0% 0%;
+    }
+
+    .quote-logo{
+        height: 50%;
+        width: 80%;
+    }
+
 }
 
 
@@ -1486,7 +1527,7 @@ a {
 
     #title-banner,
     #contact-form {
-        height: 100vh;
+        height: 120vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1512,7 +1553,6 @@ a {
     }
     
     .contact-form-box {
-        border: 2px dashed black;
         border-radius: 50px;
         padding: 1% 5% 2%;
         margin-bottom: 25px;
@@ -1531,36 +1571,60 @@ a {
         align-items: center;
         padding: 3% 1% 0%;
     }
-    
-    .banner-image{
-        /* height: 50vh; */
-        /* width: 100%; */
+
+    .box1 h5,
+    .box2 h5,
+    .box3 h5,
+    .box4 h5{
+        text-decoration: underline;
+        color: #F7F9FB;
+        font-size: 0.6rem;
     }
+
+    .box1 p,
+    .box2 p,
+    .box3 p,
+    .box4 p{
+        font-size: 0.5rem;
+        color: #F7F9FB;
+    }
+
     .box1 {
-        content: "";
-        background-color: #273f5b;
-        height: 20px;
-        width: 20px;
+        background-color: #5085a5;
+        height: 150px;
+        width: 150px;
+        justify-content: center;
+        align-items: start;
+        padding: 15% 1%;
     }
     .box2 {
-        content: "";
-        background-color: #E94057;
-        height: 20px;
-        width: 20px;
+        background-color: #31708e;
+        height: 150px;
+        width: 150px;
         border-top-right-radius: 100%;  
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 15% 1%;
     }
     .box3 {
-        content: "";
-        background-color: #273f5b;
-        height: 20px;
-        width: 20px;
+        background-color: #5085a5;
+        height: 150px;
+        width: 150px;
         border-bottom-left-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 0% 8%;
     }
     .box4 {
-        content: "";
-        background-color: #3DC2CC;
-        height: 20px;
-        width: 20px;
+        background-color: #8fc1e3;
+        height: 150px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 8% 10%;
     }
 
     .banner-image-box{
@@ -1582,6 +1646,22 @@ a {
         width: 90%;
     }
 
+    .quote-image-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quote-logo{
+        height: 70%;
+        width: 100%;
+        padding-right: 7%;
+        margin-bottom: 20px;
+    }
+
+    .contact-box{
+        padding: 3% 10%;
+    }
 }
 
 /* blog section */
