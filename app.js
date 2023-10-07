@@ -102,6 +102,8 @@ app.get("/Partner", function (req, res) {
     res.render("partner");
 });
 
+
+
 app.listen(PORT, (req, res) => {
     console.log(`server started on port ${PORT}`);
 });
