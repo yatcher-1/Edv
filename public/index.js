@@ -1,29 +1,3 @@
-// scroll animation
-
-// const navEl = document.querySelectorAll("#navbar .nav-link");
-// const brand = document.querySelector(".navbar-brand");
-// window.addEventListener("scroll", () => {
-//   navEl.forEach((e)=>{
-//     if (window.scrollY >= 18000) {
-//         e.classList.add("text-white");
-//         brand.classList.add("text-white");
-//         e.classList.remove("text-dark");
-//         brand.classList.remove("text-dark");
-//     } else if (window.scrollY >= 17200 && window.scrollY <= 18000) {
-//       e.classList.remove("text-white");
-//       brand.classList.remove("text-white");
-//       e.classList.add("text-dark");
-//       brand.classList.add("text-dark");
-//     } else if (window.scrollY <= 17200) {
-//       e.classList.add("text-white");
-//       brand.classList.add("text-white");
-//       e.classList.remove("text-dark");
-//       brand.classList.remove("text-dark");
-//     }
-//   })
-// });
-
-
 // navbar hover not hover
 const cursor = document.querySelector('.cursor');
 
@@ -43,8 +17,6 @@ document.addEventListener('click', e => {
     loader.style.display = "none";
     loader.style.zIndex = -100;
   });
-
-
 
 const classList = document.querySelectorAll(".dropdown");
     
@@ -156,24 +128,6 @@ items.forEach((el) => {
         next = next.nextElementSibling
     }
 });
-
-
-// let itemsMarquee = document.querySelectorAll('.marquee-list')
-
-// itemsMarquee.forEach((el) => {
-//     const minPerSlide = 4;
-//     let next = el.nextElementSibling
-//     for (var i=1; i<minPerSlide; i++) {
-//         if (!next) {
-//             // wrap carousel by using first child
-//         	next = itemsMarquee[0]
-//       	}
-//         let cloneChild = next.cloneNode(true)
-//         el.appendChild(cloneChild.children[0])
-//         next = next.nextElementSibling
-//     }
-// });
-
 
 // protocol section js
 

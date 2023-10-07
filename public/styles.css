@@ -85,11 +85,11 @@ h1 {
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
     letter-spacing: 3px;
-    background-image: url("/giphy.webp");
-    background-size: cover;
-    color: transparent;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
+    /* background-image: url("/giphy.webp"); */
+    /* background-size: cover; */
+    /* color: transparent; */
+    /* -moz-background-clip: text; */
+    /* -webkit-background-clip: text; */
 }
 
 p {
@@ -517,8 +517,6 @@ a {
             transform: translateY(-10px);
         }
     }
-
-
 }
 
 /* objective start */
