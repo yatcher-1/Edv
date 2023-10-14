@@ -110,7 +110,7 @@ a {
 
 .brand-logo img {
     height: 40px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 #preloader {
@@ -223,7 +223,7 @@ a {
 
     .brand-logo img {
         height: 35px;
-        width: 100%;
+        /* width: 100%; */
     }
 
     .navbar-toggler{
