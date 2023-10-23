@@ -20,8 +20,8 @@
                         <div class="card-body">
                             <hr class="hr text-light position-relative" style="width: 16rem;" />
                             <h1><%=post.title%></h1>
-                            <p class="card-text"><%=post.content%></p>
-                            <a href="/Blogs/<%=post._id%>" class="btn btn-outline-dark  ">Read More!</a>
+                            <p class="card-text"><%-post.snippet%></p>
+                            <a href="/Blogs/<%=post.slug%>" class="btn btn-outline-dark">Read More!</a>
                         </div>
                     </div>
                 </div>

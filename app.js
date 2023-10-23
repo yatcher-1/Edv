@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const _ = require("lodash");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 const http = require("http");
 const mongoose = require("mongoose");
 
@@ -21,7 +21,8 @@ const connectDB = async () => {
     const postSchema = {
       title: String,
       content: String,
-      class: String
+      class: String,
+      slug: String
     };
     
     const Post = mongoose.model("Post", postSchema);
@@ -44,13 +45,13 @@ const connectDB = async () => {
         }
       });
     });
-    app.get("/Blogs/:postId", function(req, res){
-      const requestPostId = req.params.postId;
-        Post.findOne({_id:requestPostId}).then(function(post){
+    app.get("/Blogs/:slug", function(req, res){
+      const requestPostId = req.params.slug;
+        Post.findOne({slug: requestPostId}).then(function(post){
               res.render("blog", {
                 title: post.title,
                 content: post.content,
-                post: post.class
+                post: post.class,
               });
             });
     });
