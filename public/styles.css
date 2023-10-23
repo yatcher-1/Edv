@@ -1776,6 +1776,10 @@ a {
         padding: 5% 7% 4%;
     }
 
+    .blog-post a{
+        color: #31708e!important;
+    }
+
 }
 
 @media only screen and (max-width: 1080px) {
@@ -1847,6 +1851,9 @@ a {
         font-size: 0.9rem;
     }
 
+    .blog-post a{
+        color: #31708e!important;
+    }
 }
 
 @media only screen and (min-width: 1366px) {
