@@ -1739,13 +1739,22 @@ a {
         border: 1px solid black;
     }
 
-    #blogs h2 {
+    #blogs-page-section .card{
+        width: 18rem;
+        border-radius: 45px;
+        background-color: #F7F9FB;
+        border: 1px solid black;
+    }
+
+    #blogs h2,
+    #blogs-page-section h2 {
         letter-spacing: 0px;
         font-size: 0.9rem;
     }
 
     #blogs .card:hover,
-    #banner .card:hover {
+    #banner .card:hover,
+    #blogs-page-section .card:hover {
         transform: translateY(-5px);
         border-bottom: 5px solid #0083ff;
         box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;

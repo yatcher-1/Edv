@@ -11,15 +11,15 @@
 </section>
 
     <section id="blogs-page-section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row" role="listbox">
                 <%postsFound.forEach(function(post){%>
                 <div class="col-md-3 p-3">
                     <div class="card">
                         <img src="/DIGITAL-1.webp" alt="...">
                         <div class="card-body">
-                            <hr class="hr text-light position-relative" style="width: 16rem;" />
-                            <h1><%=post.title%></h1>
+                            <hr class="hr text-light position-relative" />
+                            <h2><%=post.title%></h2>
                             <p class="card-text"><%-post.snippet%></p>
                             <a href="/Blogs/<%=post.slug%>" class="btn btn-outline-dark">Read More!</a>
                         </div>
@@ -28,16 +28,6 @@
                 <%});%>
             </div>
         </div>
-        <!-- <hr class="text-light py-5">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center pagination-lg">
-              <li class="page-item"><a class="page-link bg-dark" href="#"><span aria-hidden="true">&laquo;</span></a></li>
-              <li class="page-item"><a class="page-link bg-dark" href="#">1</a></li>
-              <li class="page-item"><a class="page-link bg-dark" href="#">2</a></li>
-              <li class="page-item"><a class="page-link bg-dark" href="#">3</a></li>
-              <li class="page-item"><a class="page-link bg-dark" href="#"><span aria-hidden="true">&raquo;</span></a></li>
-            </ul>
-          </nav> -->
     </section>
 
 <%- include ("footer.ejs")%>
