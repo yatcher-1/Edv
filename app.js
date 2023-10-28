@@ -27,8 +27,8 @@ const connectDB = async () => {
     };
     
     const Post = mongoose.model("Post", postSchema);
-    app.get("/", function(req, res){
-      Post.find({is_deleted: 0}).then(function(posts){
+    app.get("/", async function(req, res){
+      await Post.find({is_deleted: 0}).then(function(posts){
         try {
           res.render("home", {posts: posts});
         } catch (error) {
@@ -36,9 +36,9 @@ const connectDB = async () => {
         }
       });
     });
-    app.get("/Blogs", function(req, res){
+    app.get("/Blogs", async function(req, res){
       const limit = 18;
-      Post.find({is_deleted: 0}).limit(limit).then(function(posts){
+      await Post.find({is_deleted: 0}).limit(limit).then(function(posts){
         try {
           res.render("blogs", {postsFound: posts});
         } catch (error) {
@@ -46,9 +46,9 @@ const connectDB = async () => {
         }
       });
     });
-    app.get("/Blogs/:slug", function(req, res){
+    app.get("/Blogs/:slug", async function(req, res){
       const requestPostId = req.params.slug;
-        Post.findOne({slug: requestPostId, is_deleted: 0}).then(function(post){
+       await Post.findOne({slug: requestPostId, is_deleted: 0}).then(function(post){
               res.render("blog", {
                 title: post.title,
                 content: post.content,
