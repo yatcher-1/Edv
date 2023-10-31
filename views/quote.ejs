@@ -53,7 +53,7 @@
                         <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea required>
                     </div>
                     <div class="col-lg-12 text-center">
-                        <button type="submit" class="btn btn-dark btn-sm-sm btn-lg-lg border rounded-pill fw-bolder my-4">Sign Up!</button>
+                        <button type="submit" id="submit" class="btn btn-dark btn-sm-sm btn-lg-lg border rounded-pill fw-bolder my-4">Sign Up!</button>
                     </div>
                 </form>
             </div>
@@ -67,11 +67,14 @@
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyxPyq-Y90eB3unz0x5_oJUeebmJOQLqVdCyuGkaD-Aj92Ahd1IaFmW5ffhYdTxLYfQ/exec'
   const form = document.forms['submit-to-google-sheet2']
   const success = document.getElementById("success") 
+  const submit = document.getElementById("submit") 
   form.addEventListener('submit', e => {
     e.preventDefault()
+    submit.innerHTML = "Submiting...";
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
         success.innerHTML = "Thanks for providing your query!";
+        submit.innerHTML = "Sign Up!";
         setTimeout(()=>{
           success.innerHTML = "";
         }, 5000)

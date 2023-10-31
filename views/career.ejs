@@ -116,7 +116,7 @@
                         </select>
                         </div>
                         <div class="col-lg-12 text-center">
-                            <button type="submit" class="btn btn-primary btn-sm-sm btn-lg-lg border rounded-pill fw-bolder my-4">Submit</button>
+                            <button type="submit" id="submit" class="btn btn-primary btn-sm-sm btn-lg-lg border rounded-pill fw-bolder my-4">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -135,11 +135,14 @@
   const form = document.forms['submit-to-google-sheet4']
   const success = document.getElementById("success") 
   const modal = document.getElementById("staticBackdrop") 
+  const submit = document.getElementById("submit") 
   form.addEventListener('submit', e => {
     e.preventDefault()
+    submit.innerHTML = "Submiting...";
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
         success.innerHTML = "Thanks for providing your query!";
+        submit.innerHTML = "Sign Up!";
         setTimeout(()=>{
           success.innerHTML = "";
         }, 5000)

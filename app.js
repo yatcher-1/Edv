@@ -64,7 +64,7 @@ const connectDB = async () => {
 
 connectDB();
 
-app.get("/Eccomerce-Consultancy", function (req, res) {
+app.get("/Ecommerce-Consultancy", function (req, res) {
   res.render("ecomerce");
 });
 
@@ -76,11 +76,11 @@ app.get("/Influencer-Marketing", function (req, res) {
   res.render("influencer");
 });
 
-app.get("/Web-Dev", function (req, res) {
+app.get("/Website-Development", function (req, res) {
   res.render("webdesign");
 });
 
-app.get("/Reco", function (req, res) {
+app.get("/Business-Reconciliation", function (req, res) {
   res.render("Reco");
 });
 

@@ -7,16 +7,78 @@
 
             </div>
         </div>
-        <hr>
-        <article class="blog-post">
-            <div class="col-lg-12 px-0">
-                <h1 class="display-4 fst-italic text-capitalize text-dark"><%=title%></h1>
+        <!-- <hr> -->
+        <div class="row">
+            <div class="col-lg-8">
+                <article class="blog-post">
+                    <div class="col-lg-12 px-0">
+                        <h1 class="display-4 fst-italic text-capitalize text-dark"><%=title%></h1>
+                    </div>
+                    <p class="lead content-blog my-3"><%-content%></p>
+                </article>
             </div>
-            <p class="lead content-blog my-3"><%-content%></p>
-        </article>
-        <hr>
+            <div class="d-lg-flex col-lg-1 d-sm-none justify-content-center">
+                <div class="vr"></div>
+            </div>
+            <div class="col-lg-3">
+                <div class="title-blog">
+                    <h4 class="display-4 fst-italic text-capitalize text-dark">Contact-Us!</h4>
+                </div>
+                <span id="success" class="fw-bolder text-center text-capitalize p-2"></span>
+                <form id="myForm" class="row g-2" name="submit-to-google-sheet5">
+                    <div class="col-md-12">
+                        <label for="firstName" class="form-label text-dark">First Name</label>
+                        <input type="text" name="firstName" class="form-control" id="firstName" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="lastName" class="form-label text-dark">Last Name</label>
+                        <input type="text" name="lastName" class="form-control" id="lastName" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="email" class="form-label text-dark">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="contactNumber" class="form-label text-dark">Contact No.</label>
+                        <input type="tel" name="contactNumber" class="form-control" id="contactNum" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="exampleFormControlTextarea1" class="form-label text-dark">Message</label>
+                        <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea required>
+                    </div>
+                    <div class="col-md-12">
+                        <input class="form-control" type="hidden" name="title" id="exampleFormControlTextarea1" value="<%=title%>" readonly />
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <button type="submit" id="submit" class="btn btn-dark btn-lg border rounded-pill fw-bolder my-4">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
+
+<script>
+    // form script
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyVKF5bXV-IUhOjfKTzebedB6kfdGJF4w-RQR8OP7IP6oh8mtGNTDHAwIEBpU3tnhPk/exec'
+      const form = document.forms['submit-to-google-sheet5']
+      const success = document.getElementById("success") 
+      const submit = document.getElementById("submit") 
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        submit.innerHTML = "Submiting...";
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+              success.innerHTML = "Thanks for providing your query!";
+              submit.innerHTML = "Submit";
+            setTimeout(()=>{
+              success.innerHTML = "";
+            }, 5000)
+            form.reset();
+          })
+          .catch(error => console.error('Error!', error.message))
+      });
+    </script>
 
 
 <%- include ("footer.ejs")%>
