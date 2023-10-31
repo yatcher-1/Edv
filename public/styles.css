@@ -312,18 +312,16 @@ a {
     }
 
     .title {
-        /* color: #273f5b; */
         padding: 10% 1% 1% 1%;
     }
 
     .title-img {
         width: 100%;
         padding: 1% 5% 3% 3%;
-        /* opacity: 90%;     */
     }
 
     #hero h1 {
-        font-size: 4rem;
+        font-size: 3.8rem;
         line-height: 1.4;
     }
 
@@ -381,10 +379,6 @@ a {
         border: 1px solid #000;
         border-radius: 100%;
         transform: translateX(54rem);
-    }
-
-    .web-devlop{
-        font-size: 3.4rem;
     }
 
     img.title-img {
@@ -688,11 +682,6 @@ a {
         padding: 4% 4%;
     }
 
-    ul.timeline-list p {
-        color: #F7F9FB !important;
-    }
-
-
     ul.timeline-list li.timeline_content {
         padding: 1% 3% 0%;
         float: left;
@@ -935,11 +924,7 @@ a {
     }
 
     .service p {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        line-height: 1.5;
+        font-size: 0.8rem;
     }
 
     .service-gif {
